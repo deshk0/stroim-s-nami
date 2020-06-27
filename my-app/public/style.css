@@ -30,7 +30,7 @@ body{
 }
 #MainHeader{
     display: flex;
-    height: 60px;
+    height: 90px;
     background-color: var(--black);
     
 }
@@ -145,7 +145,7 @@ body{
 #Header{
     height: 600px;
     background-size: 100%;
-    background-image: url(header-photo.jpg);
+    background-image: url(bg.jpg);
     background-repeat: no-repeat;
 }
 .Header-container{
@@ -364,6 +364,7 @@ body{
     font-weight: bold;
     color: var(--Orange);
     margin-left: 20px;
+    font-size: 20px;
 
 }
 .Footer-nav-col3-box2{

@@ -32,8 +32,8 @@ class Header extends React.Component{
                     <div className="Header-container">
                         <h1 className="Header-headline1">Строим с Нами</h1>
                         <h2 className="Header-headline2">
-                            Еврозабор Полтава! Еврозабор и ворота всех видов.
-                            Установка, Покраска. Автоматика. Термофасад
+                            Еврозабор Полтава Установка Покраска<br /> Заборы и ворота всех видов
+                            Автоматика Термофасад Плитка
                         </h2>
                         <a className="Header-button" href="/form">Оставить заявку</a>
                     </div>
@@ -64,7 +64,7 @@ class OurPropose extends React.Component{
                     <div className="OurPropose-container-box">
                         <img className="OurPropose-container-box-photo" src="OurPropose-photo.jpeg" alt="OurPropose-photo"></img>
                         <div className="OurPropose-container-box-border">
-                            <div className='OurPropose-container-box-name'>Ворота</div>
+                            <div className='OurPropose-container-box-name'>Заборы</div>
                             <div className="OurPropose-container-box-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, nemo! Explicabo reprehenderit voluptates cum dolorum accusamus ducimus, itaque voluptatum ipsum, similique quasi rem nobis quo. Voluptas odit officia dolore fuga?</div>
                             <a href="/market" className="OurPropose-container-box-button">Все предложения</a>
                         </div>
@@ -72,7 +72,7 @@ class OurPropose extends React.Component{
                     <div className="OurPropose-container-box">
                         <img className="OurPropose-container-box-photo" src="OurPropose-photo.jpeg" alt="OurPropose-photo"></img>
                         <div className="OurPropose-container-box-border">
-                            <div className='OurPropose-container-box-name'>Ворота</div>
+                            <div className='OurPropose-container-box-name'>Автоматика для ворот</div>
                             <div className="OurPropose-container-box-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, nemo! Explicabo reprehenderit voluptates cum dolorum accusamus ducimus, itaque voluptatum ipsum, similique quasi rem nobis quo. Voluptas odit officia dolore fuga?</div>
                             <a href="/market" className="OurPropose-container-box-button">Все предложения</a>
                         </div>
@@ -82,7 +82,7 @@ class OurPropose extends React.Component{
                     <div className="OurPropose-container-box">
                         <img className="OurPropose-container-box-photo" src="OurPropose-photo.jpeg" alt="OurPropose-photo"></img>
                         <div className="OurPropose-container-box-border">
-                            <div className='OurPropose-container-box-name'>Ворота</div>
+                            <div className='OurPropose-container-box-name'>Роллеты</div>
                             <div className="OurPropose-container-box-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, nemo! Explicabo reprehenderit voluptates cum dolorum accusamus ducimus, itaque voluptatum ipsum, similique quasi rem nobis quo. Voluptas odit officia dolore fuga?</div>
                             <a href="/market" className="OurPropose-container-box-button">Все предложения</a>
                         </div>
@@ -90,7 +90,15 @@ class OurPropose extends React.Component{
                     <div className="OurPropose-container-box">
                         <img className="OurPropose-container-box-photo" src="OurPropose-photo.jpeg" alt="OurPropose-photo"></img>
                         <div className="OurPropose-container-box-border">
-                            <div className='OurPropose-container-box-name'>Ворота</div>
+                            <div className='OurPropose-container-box-name'>Плитки</div>
+                            <div className="OurPropose-container-box-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, nemo! Explicabo reprehenderit voluptates cum dolorum accusamus ducimus, itaque voluptatum ipsum, similique quasi rem nobis quo. Voluptas odit officia dolore fuga?</div>
+                            <a href="/market" className="OurPropose-container-box-button">Все предложения</a>
+                        </div>
+                    </div>
+                    <div className="OurPropose-container-box">
+                        <img className="OurPropose-container-box-photo" src="OurPropose-photo.jpeg" alt="OurPropose-photo"></img>
+                        <div className="OurPropose-container-box-border">
+                            <div className='OurPropose-container-box-name'>Плитки</div>
                             <div className="OurPropose-container-box-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, nemo! Explicabo reprehenderit voluptates cum dolorum accusamus ducimus, itaque voluptatum ipsum, similique quasi rem nobis quo. Voluptas odit officia dolore fuga?</div>
                             <a href="/market" className="OurPropose-container-box-button">Все предложения</a>
                         </div>

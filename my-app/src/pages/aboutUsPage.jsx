@@ -93,19 +93,25 @@ class Main extends React.Component{
                                 </div>
                                 <div className="AboutUsMain-aboutus-container-1-box">
                                     <div className="AboutUsMain-aboutus-container-1-box-text">
-                                        <div className="AboutUsMain-aboutus-container-1-box-text1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus amet optio illo molestias nisi. Minus reiciendis, modi saepe nulla perspiciatis, eligendi porro aut rerum provident quibusdam consectetur eos numquam sequi.</div>
-                                        <div className="AboutUsMain-aboutus-container-1-box-text1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus amet optio illo molestias nisi. Minus reiciendis, modi saepe nulla perspiciatis, eligendi porro aut rerum provident quibusdam consectetur eos numquam sequi.</div>
+                                        <div className="AboutUsMain-aboutus-container-1-box-text1">
+                                        Строительная компания "Строим с Нами" уже более 15 лет на рынке и с каждым годом все больше и больше радует своих клиентов. Высоким качеством работ.
+                                        </div>
+                                        <div className="AboutUsMain-aboutus-container-1-box-text1">
+                                        Для себя и своей семьи всегда старайтесь выбирать все только самое лучшее. Пользуйтесь услугами "Строим с Нами", и облагораживание участка превратиться из заботы в хобби! 
+                                        </div>
                                     </div>
 
                                     <div className="AboutUsMain-aboutus-container-1-box-text">
-                                        <div className="AboutUsMain-aboutus-container-1-box-text1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus amet optio illo molestias nisi. Minus reiciendis, modi saepe nulla perspiciatis, eligendi porro aut rerum provident quibusdam consectetur eos numquam sequi.</div>
+                                        <div className="AboutUsMain-aboutus-container-1-box-text1">
+                                        Технологии современного строительства ушли так далеко вперед, что сегодня можно в кратчайшие сроки изготовить забор под любые желания и требования. Все, чтобы радовать Вас!
+                                        </div>
                                         <a  className="AboutUsMain-aboutus-container-1-box-text-button" href="/">Посмотреть товары</a>
                                     </div>
                                 </div>
                             </div>
                             <div className="AboutUsMain-aboutus-container-2">
                                 <div className="AboutUsMain-aboutus-container-2-box1">
-                                    <div className="AboutUsMain-aboutus-container-2-box-number">7</div>
+                                    <div className="AboutUsMain-aboutus-container-2-box-number">15</div>
                                     <div className="AboutUsMain-aboutus-container-2-box-text">Лет на рынке</div>
                                 </div>
                                 <div className="AboutUsMain-aboutus-container-2-box2">
@@ -150,12 +156,12 @@ class Main extends React.Component{
                 <section className="AboutUsMain-video">
                     <div className="AboutUsMain-video-text">
                         <div className="AboutUsMain-video-text-title">
-                            <div>Занимаемся строительством больше 7-и лет</div>
+                            <div>Занимаемся строительством больше 15-и лет</div>
                             <div className='AboutUsMain-video-line'></div>
                         </div>
                         <div className="AboutUsMain-video-text-text">
-                            <div className="AboutUsMain-video-text-text-1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum aspernatur culpa vitae voluptates perspiciatis reprehenderit nobis in, ratione ea itaque eius repellendus dolorum fuga sequi praesentium velit nihil, temporibus qui! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur, deleniti temporibus ipsum, perferendis, eveniet non atque odio maiores est a ab blanditiis explicabo distinctio ad aperiam corrupti tempora fuga hic!</div>
-                            <div className="AboutUsMain-video-text-text-2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident harum asperiores voluptas distinctio? Reprehenderit porro reiciendis magni, in doloribus aliquam repellendus hic quaerat dolor, quis magnam eveniet, ratione ut voluptas?</div>
+                            <div className="AboutUsMain-video-text-text-1">Мы предоставляем все услуги, а именно: Консультация, Замер, Изготовление плит и столбов, Установка, Покраска. Наша бригада имеет большой опыт в проведении строительно-монтажных работ. Что бы из вышеперечисленного Вы не выбрали, мы гарантируем: Надежность, эстетическую привлекательность, большой цветовой и дизайнерский выбор, морозостойкость</div>
+                            <div className="AboutUsMain-video-text-text-2">Вы можете установить уникальное, качественное и надежное ограждение, которого не будет ни у кого из Ваших соседей, а все благодаря тому, что мы занимаемся собственным производством, покраской и установкой заборов уже много лет и опыта в этом деле нам не занимать! Поэтому, лучше сразу доверить всю работу профессионалам Строим с Нами!</div>
                         </div>
                     </div>
                     <div>
