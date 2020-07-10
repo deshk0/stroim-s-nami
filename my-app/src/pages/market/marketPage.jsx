@@ -322,27 +322,37 @@ class Fences extends React.Component{
     constructor(){
         super()
         this.itemBox = [
-            <ItemBox category="Откатные" name="Заборы Откатные" price={100} />,
-            <ItemBox category="Распашные" name="Заборы Распашные" price={80} />,
-            <ItemBox category="Обычные" name="Заборы Обычные" price={90} />,
-            <ItemBox category="Откатные" name="Заборы Распашные" price={55} />,
-            <ItemBox category="Обычные" name="Заборы Обычные" price={34} />,
-            <ItemBox category="Обычные" name="Заборы Обычные" price={15} />,
-            <ItemBox category="Распашные" name="Заборы Распашные" price={64} />,
-            <ItemBox category="Откатные" name="Заборы Откатные" price={75} />,
-            <ItemBox category="Распашные" name="Заборы Распашные" price={24} />,
+            <ItemBox category="Еврозабор" name="Еврозабор" price={100} />,
+            <ItemBox category="Еврозабор с покраской" name="Еврозабор с покраской" price={80} />,
+            <ItemBox category="Секционный металический" name="Забор метал-сетка" price={90} />,
+            <ItemBox category="Сетка рабица" name="Забор сетка рабица" price={55} />,
+            <ItemBox category="Комбинированный" name="Еврозабор Комбинированный" price={34} />,
         ]
+        this.itemBox1 = [
+            <ItemBox category="Еврозабор" name="Еврозабор" price={100} />,
+            <ItemBox category="Еврозабор" name="Еврозабор" price={10} />
+
+        ]
+        this.itemBox2 = [
+            <ItemBox category="Еврозабор с покраской" name="Еврозабор с покраской" price={100} />
+        ]
+        this.itemBox3 = [
+            <ItemBox category="Секционный металический" name="Забор метал-сетка" price={100} />
+        ]
+        this.itemBox4 = [
+            <ItemBox category="Сетка рабица" name="Еврозабор Сетка рабица" price={100} />
+        ]
+        this.itemBox5 = [
+            <ItemBox category="Комбинированный" name="Еврозабор Комбинированный" price={100} />
+        ]
+        
         this.state = {
             itemBox: [
-                <ItemBox category="Откатные" name="Заборы Откатные" price={100} />,
-                <ItemBox category="Распашные" name="Заборы Распашные" price={80} />,
-                <ItemBox category="Обычные" name="Заборы Обычные" price={90} />,
-                <ItemBox category="Откатные" name="Заборы Откатные" price={55} />,
-                <ItemBox category="Обычные" name="Заборы Обычные" price={34} />,
-                <ItemBox category="Обычные" name="Заборы Обычные" price={15} />,
-                <ItemBox category="Распашные" name="Заборы Распашные" price={64} />,
-                <ItemBox category="Откатные" name="Заборы Откатные" price={75} />,
-                <ItemBox category="Распашные" name="Заборы Распашные" price={24} />,
+                <ItemBox category="Еврозабор" name="Еврозабор" price={100} />,
+                <ItemBox category="Еврозабор с покраской" name="Еврозабор с покраской" price={80} />,
+                <ItemBox category="Секционный металический" name="Забор метал-сетка" price={90} />,
+                <ItemBox category="Сетка рабица" name="Забор сетка рабица" price={55} />,
+                <ItemBox category="Комбинированный" name="Еврозабор Комбинированный" price={34} />,
             ],
         }
         
@@ -387,8 +397,143 @@ class Fences extends React.Component{
                 itemBox: newArr1,
             })
         }
-
     }
+    ToAll(e){
+        e.preventDefault()
+
+        const button = document.getElementsByClassName('MarketMain-filter-button')
+        const style = 'MarketMain-filter-button_active'
+
+
+        button[0].classList.add(style)
+        button[1].classList.remove(style)
+        button[2].classList.remove(style)
+        button[3].classList.remove(style)
+        button[4].classList.remove(style)
+        button[5].classList.remove(style)
+
+        const arr = this.itemBox
+        if(arr){
+            this.setState({
+                itemBox: arr,
+            })
+        }
+    }
+    ToItemBox1(e){
+        e.preventDefault()
+
+        const button = document.getElementsByClassName('MarketMain-filter-button')
+        const style = 'MarketMain-filter-button_active'
+
+        button[1].classList.add(style)
+        button[0].classList.remove(style)
+        button[2].classList.remove(style)
+        button[3].classList.remove(style)
+        button[4].classList.remove(style)
+        button[5].classList.remove(style)
+
+
+
+        const arr = this.itemBox1
+        if(arr){
+            this.setState({
+                itemBox: arr,
+            })
+        }
+    }
+
+    ToItemBox2(e){
+        e.preventDefault()
+
+        const button = document.getElementsByClassName('MarketMain-filter-button')
+        const style = 'MarketMain-filter-button_active'
+
+        button[0].classList.remove(style)
+        button[1].classList.remove(style)
+        button[2].classList.add(style)
+        button[3].classList.remove(style)
+        button[4].classList.remove(style)
+        button[5].classList.remove(style)
+
+
+
+        const arr = this.itemBox2
+        if(arr){
+            this.setState({
+                itemBox: arr,
+            })
+        }
+    }
+
+    ToItemBox3(e){
+        e.preventDefault()
+
+        const button = document.getElementsByClassName('MarketMain-filter-button')
+        const style = 'MarketMain-filter-button_active'
+
+        button[0].classList.remove(style)
+        button[1].classList.remove(style)
+        button[2].classList.remove(style)
+        button[3].classList.add(style)
+        button[4].classList.remove(style)
+        button[5].classList.remove(style)
+
+
+
+        const arr = this.itemBox3
+        if(arr){
+            this.setState({
+                itemBox: arr,
+            })
+        }
+    }
+
+    ToItemBox4(e){
+        e.preventDefault()
+
+        const button = document.getElementsByClassName('MarketMain-filter-button')
+        const style = 'MarketMain-filter-button_active'
+
+        button[0].classList.remove(style)
+        button[1].classList.remove(style)
+        button[2].classList.remove(style)
+        button[3].classList.remove(style)
+        button[4].classList.add(style)
+        button[5].classList.remove(style)
+
+
+
+        const arr = this.itemBox4
+        if(arr){
+            this.setState({
+                itemBox: arr,
+            })
+        }
+    }
+
+    ToItemBox5(e){
+        e.preventDefault()
+
+        const button = document.getElementsByClassName('MarketMain-filter-button')
+        const style = 'MarketMain-filter-button_active'
+
+        button[0].classList.remove(style)
+        button[1].classList.remove(style)
+        button[2].classList.remove(style)
+        button[3].classList.remove(style)
+        button[4].classList.remove(style)
+        button[5].classList.add(style)
+
+
+
+        const arr = this.itemBox5
+        if(arr){
+            this.setState({
+                itemBox: arr,
+            })
+        }
+    }
+
     onChange(event){
         let value = event.target.value.trim()
         let newValue = value.toLowerCase()
@@ -438,7 +583,24 @@ class Fences extends React.Component{
                     <div className='MarketMain-container1-filter'>
                         <div className="MarketMain-text">Сортировка:</div>
                         <div className="MarketMain-filter">
-                            Выберите категорию товара
+                            <a className="MarketMain-filter-button" onClick={this.ToAll = this.ToAll.bind(this)} href="/">
+                                Все товары
+                            </a>
+                            <a className="MarketMain-filter-button" onClick={this.ToItemBox1 = this.ToItemBox1.bind(this)} href="/">
+                                Еврозабор
+                            </a>
+                            <a className="MarketMain-filter-button" onClick={this.ToItemBox2 = this.ToItemBox2.bind(this)} href="/">
+                                Еврозабор с покраской
+                            </a>
+                            <a className="MarketMain-filter-button" onClick={this.ToItemBox3 = this.ToItemBox3.bind(this)} href="/">
+                                Забор метал-сетка
+                            </a>
+                            <a className="MarketMain-filter-button" onClick={this.ToItemBox4 = this.ToItemBox4.bind(this)} href="/">
+                                Забор сетка рабица
+                            </a>
+                            <a className="MarketMain-filter-button" onClick={this.ToItemBox5 = this.ToItemBox5.bind(this)} href="/">
+                                Комбинированный
+                            </a>
                         </div>
                     </div>
                 </div>
