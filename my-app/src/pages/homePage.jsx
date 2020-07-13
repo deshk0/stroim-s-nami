@@ -56,16 +56,36 @@ class OurPropose extends React.Component{
                     <div className="OurPropose-container-box">
                         <img className="OurPropose-container-box-photo" src="OurPropose-photo.jpeg" alt="OurPropose-photo"></img>
                         <div className="OurPropose-container-box-border">
-                            <div className='OurPropose-container-box-name'>Ворота</div>
-                            <div className="OurPropose-container-box-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, nemo! Explicabo reprehenderit voluptates cum dolorum accusamus ducimus, itaque voluptatum ipsum, similique quasi rem nobis quo. Voluptas odit officia dolore fuga?</div>
+                            <div className='OurPropose-container-box-name'>Заборы</div>
+                            <div className="OurPropose-container-box-desc">
+                                Еврозабор собственного производства. На сегодняшний день это оптимальный вариант, соотношения цены и качества при выборе и строительстве забора. Еврозабор имеет ряд достоинств, перед иными капитальными строениями. Всё изготовлено из качественного материала.            
+                            </div>
                             <a href="/market" className="OurPropose-container-box-button">Все предложения</a>
                         </div>
                     </div>
                     <div className="OurPropose-container-box">
                         <img className="OurPropose-container-box-photo" src="OurPropose-photo.jpeg" alt="OurPropose-photo"></img>
                         <div className="OurPropose-container-box-border">
-                            <div className='OurPropose-container-box-name'>Заборы</div>
-                            <div className="OurPropose-container-box-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, nemo! Explicabo reprehenderit voluptates cum dolorum accusamus ducimus, itaque voluptatum ipsum, similique quasi rem nobis quo. Voluptas odit officia dolore fuga?</div>
+                            <div className='OurPropose-container-box-name'>Ворота</div>
+                            <div style={{fontSize:'15px'}} className="OurPropose-container-box-desc">
+                                На сегодняшний день компания «Строим с Нами» предлагает ворота собственного производства:
+
+                                    <br />из разных материалов (профнастил, металлические, филенчатые);
+                                    <br />учитывая предназначение (въездные, гаражные)
+                                    <br />любой стоимостью (бюджетные, дорогостоящие);
+                                    <br />необходимого качества;
+                                    <br />для выполнения нужных функций.                           
+                            </div>
+                            <a href="/market" className="OurPropose-container-box-button">Все предложения</a>
+                        </div>
+                    </div>
+                    <div className="OurPropose-container-box">
+                        <img className="OurPropose-container-box-photo" src="OurPropose-photo.jpeg" alt="OurPropose-photo"></img>
+                        <div className="OurPropose-container-box-border">
+                            <div className='OurPropose-container-box-name'>Покраска</div>
+                            <div className="OurPropose-container-box-desc">
+                                Покраска еврозаборов высококачественными материалами. Поможет сохранить забор от разрушений и сделает ограждение индивидуальным, выделив форму и особенности плит.
+                            </div>
                             <a href="/market" className="OurPropose-container-box-button">Все предложения</a>
                         </div>
                     </div>
@@ -73,36 +93,32 @@ class OurPropose extends React.Component{
                         <img className="OurPropose-container-box-photo" src="OurPropose-photo.jpeg" alt="OurPropose-photo"></img>
                         <div className="OurPropose-container-box-border">
                             <div className='OurPropose-container-box-name'>Автоматика для ворот</div>
-                            <div className="OurPropose-container-box-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, nemo! Explicabo reprehenderit voluptates cum dolorum accusamus ducimus, itaque voluptatum ipsum, similique quasi rem nobis quo. Voluptas odit officia dolore fuga?</div>
+                            <div className="OurPropose-container-box-desc">
+                                В категорию «Автоматика для ворот» входят промышленные, гаражные, въездные конструкции. Для их изготовления применяются современные материалы, инновационная автоматика. Прочность, надежность, практичность и удобство в эксплуатации.
+                            </div>
                             <a href="/market" className="OurPropose-container-box-button">Все предложения</a>
                         </div>
                     </div>
-                </div>
-                <div className="OurPropose-container">
                     <div className="OurPropose-container-box">
                         <img className="OurPropose-container-box-photo" src="OurPropose-photo.jpeg" alt="OurPropose-photo"></img>
                         <div className="OurPropose-container-box-border">
                             <div className='OurPropose-container-box-name'>Роллеты</div>
-                            <div className="OurPropose-container-box-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, nemo! Explicabo reprehenderit voluptates cum dolorum accusamus ducimus, itaque voluptatum ipsum, similique quasi rem nobis quo. Voluptas odit officia dolore fuga?</div>
+                            <div className="OurPropose-container-box-desc">
+                                Системы роллет являются защитными конструкциями для дверных, оконных проемов. Это алюминиевые полотна, движущие по направляющим, которые сворачиваются в короб рулоном.
+                            </div>
                             <a href="/market" className="OurPropose-container-box-button">Все предложения</a>
                         </div>
                     </div>
                     <div className="OurPropose-container-box">
                         <img className="OurPropose-container-box-photo" src="OurPropose-photo.jpeg" alt="OurPropose-photo"></img>
                         <div className="OurPropose-container-box-border">
-                            <div className='OurPropose-container-box-name'>Плитки</div>
-                            <div className="OurPropose-container-box-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, nemo! Explicabo reprehenderit voluptates cum dolorum accusamus ducimus, itaque voluptatum ipsum, similique quasi rem nobis quo. Voluptas odit officia dolore fuga?</div>
+                            <div className='OurPropose-container-box-name'>Плитка "Экология"</div>
+                            <div className="OurPropose-container-box-desc">
+                                Плитка газонная (решетка, экология) ― это плитка для создания автомобильных парковок, проезда транспорта в зоне озеленения. Защищает грунт от эрозии, гарантирует нормальную циркуляцию воды и рост газонной травы.                            </div>
                             <a href="/market" className="OurPropose-container-box-button">Все предложения</a>
                         </div>
                     </div>
-                    <div className="OurPropose-container-box">
-                        <img className="OurPropose-container-box-photo" src="OurPropose-photo.jpeg" alt="OurPropose-photo"></img>
-                        <div className="OurPropose-container-box-border">
-                            <div className='OurPropose-container-box-name'>Плитки</div>
-                            <div className="OurPropose-container-box-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, nemo! Explicabo reprehenderit voluptates cum dolorum accusamus ducimus, itaque voluptatum ipsum, similique quasi rem nobis quo. Voluptas odit officia dolore fuga?</div>
-                            <a href="/market" className="OurPropose-container-box-button">Все предложения</a>
-                        </div>
-                    </div>
+
                 </div>
             </section>
         )

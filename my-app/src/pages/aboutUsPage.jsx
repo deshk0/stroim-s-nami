@@ -33,7 +33,8 @@ class Header extends React.Component{
                         <h1>Еврозабор, ворота, автоматика</h1>
                     </div>
                     <div className="Aboutus-Header-leftSide-desc">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore possimus magnam ipsam iste. Quidem consequuntur beatae unde, ab ratione sunt molestias voluptatum possimus eaque, vel sit nobis eveniet! Blanditiis, tempore.
+                        Еврозабор собственного производства. На сегодняшний день это оптимальный вариант, соотношения цены и качества при выборе и строительстве забора. Еврозабор имеет ряд достоинств, перед иными капитальными строениями. Сами плиты еврозабора изготовлены из качественного материала.
+                        Выполняем работу любой сложности!
                     </div>
                     <a className="Aboutus-Header-leftSide-button" href='/'>Посмотреть все предложения</a>
                 </div>
@@ -44,21 +45,29 @@ class Header extends React.Component{
                             <img className="Aboutus-Header-ico" src="/box.svg" alt="icon"></img>
                             <div className="Aboutus-Header-rightSide-box-desc">
                                 <div className="Aboutus-Header-rightSide-box-desc-title">Доставка материалов</div>
-                                <div className="Aboutus-Header-rightSide-box-desc-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt necessitatibus quae impedit quidem, cum magni obcaecati quis suscipit ullam quod, culpa provident. Magnam, similique unde! Inventore neque voluptatibus et tenetur.</div>
+                                <div className="Aboutus-Header-rightSide-box-desc-desc">
+                                    Способ оплаты: наличный и безналичный рассчёт. Доставка товара по всей Украине.
+                                    Предоставляем рассрочку до 6 месяцев
+                                    Быстро, качественно, надёжно
+                                </div>
                             </div>
                         </div>
                         <div className="Aboutus-Header-rightSide-item">
                             <img className="Aboutus-Header-ico" src="/fence.svg" alt="icon"></img>
                             <div className="Aboutus-Header-rightSide-box-desc">
                                 <div className="Aboutus-Header-rightSide-box-desc-title">Установка забора</div>
-                                <div className="Aboutus-Header-rightSide-box-desc-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt necessitatibus quae impedit quidem, cum magni obcaecati quis suscipit ullam quod, culpa provident. Magnam, similique unde! Inventore neque voluptatibus et tenetur.</div>
+                                <div className="Aboutus-Header-rightSide-box-desc-desc">
+                                    Наша бригада имеет большой опыт в провидении строительно-монтажных работ. С каждым нашим клиентом мы работаем индивидуально.
+                                </div>
                             </div>
                         </div>
                         <div className="Aboutus-Header-rightSide-item">
                             <img className="Aboutus-Header-ico" src="/worker.svg" alt="icon"></img>
                             <div className="Aboutus-Header-rightSide-box-desc">
                                 <div className="Aboutus-Header-rightSide-box-desc-title">Установка и обслуживание автоматики</div>
-                                <div className="Aboutus-Header-rightSide-box-desc-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt necessitatibus quae impedit quidem, cum magni obcaecati quis suscipit ullam quod, culpa provident. Magnam, similique unde! Inventore neque voluptatibus et tenetur.</div>
+                                <div className="Aboutus-Header-rightSide-box-desc-desc">
+                                    Компания "Строим с Нами" является официальным дилером известных брендов автоматики для ворот. Производим продажу и установку автоматики Comunello, Alutech, Anmotors для всех видов ворот. Предоставляем гарантию до 3-х лет.
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -146,6 +146,7 @@ body{
 .Navbar-ProductsAndService a{
     padding: 5px 10px;
     font-size: 14px;
+    background-color: var(--Orange);
 }
 .Navbar-ProductsAndService a:hover{
     transition: 0.5s;
@@ -216,6 +217,7 @@ body{
 }
 .OurPropose-container{
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
 }
@@ -249,6 +251,7 @@ body{
     font-weight: 300;
     margin: 20px 40px;
     width: 280px;
+    height: 175px;
 }
 .OurPropose-container-box-button{
     font-size: 16px;
@@ -485,6 +488,18 @@ body{
 #MarketMain{
     display: flex;
     flex-direction: column;
+}
+.MarketMain-filter-button{
+    margin: 0 5px;
+}
+
+.MarketMain-filter-button_active{
+    border: 1px solid var(--black);
+    border-radius: 100px;
+    padding: 10px;
+}
+.MarketMain-filter-button:hover{
+    color: white;
 }
 .MarketMain-container1{
     display: flex;
