@@ -69,13 +69,13 @@ export class Footer extends React.Component{
                                 <div className="Footer-nav-col3-numbers">098-550-10-95</div>
                             </div>
                         </div>
-                        <a href="/">
+                        <a target="_blank" href="https://www.instagram.com/stroim.s.nami/">
                         <div className="Footer-nav-col3-box2">
                             <img className="Footer-nav-col3-box1-photo" src="/instagram.svg" alt='icon'></img>
                             <div className="Footer-nav-col3-box2-text">@stroim.s.nami</div>
                         </div>
                         </a>
-                        <a href="/">
+                        <a target="_blank" href="https://www.facebook.com/ZaborVorotaPoltava">
                             <div className="Footer-nav-col3-box2">
                                 <img className="Footer-nav-col3-box1-photo" src="/facebook.svg" alt='icon'></img>
                                 <div className="Footer-nav-col3-box2-text">@ZaborVorotaPoltava</div>
@@ -92,6 +92,31 @@ export class Footer extends React.Component{
                             <div>Designed and Developed by «­Cool Raccoon`s»</div>
                         </div>
                     </div>
+                </div>
+                <div className="Footer-mobile">
+                    <a className="Footer-logo-href" href="/stroim-s-nami.ua">
+                        <img className="MainHeader-block1-logo" src="/logo.png" alt='logo'></img>
+                    </a>
+                    <nav className="Footer-mobile-nav">
+                        <a className="Footer-mobile-link" href="/">Главная</a>
+                        <a className="Footer-mobile-link" href="/aboutus">О нас</a>
+                        <a className="Footer-mobile-link" href="/market">Товары и услуги</a>
+                        <a className="Footer-mobile-link" href="/desivery">Доставка и оплата</a>
+                        <a className="Footer-mobile-link" href="/gallery">Фотогалерея</a>
+                    </nav>
+                    <div className="Footer-mobile-socialmedia">
+                        <div className="Footer-mobile-socialmedia-box">
+                            <a target="_blank" href="https://www.instagram.com/stroim.s.nami/">
+                                <img className="Footer-mobile-icon" src="instagram.svg" alt="icon"></img>
+                            </a>
+                        </div>
+                        <div className="Footer-mobile-socialmedia-box">
+                            <a target="_blank" href="https://www.facebook.com/ZaborVorotaPoltava">
+                                <img className="Footer-mobile-icon" src="facebook.svg" alt="icon"></img>
+                            </a>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         )
