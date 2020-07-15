@@ -1,3 +1,19 @@
-# https://www.robotstxt.org/robotstxt.html
+Host: https://stroim-s-nami.com.ua
+
+User-agent: Googlebot
+
+Disallow: /form/
+Disallow: /thankspage/
+Disallow: /aboutus/
+Disallow: /desivery/
+Disallow: /gallery/
+
+
+
+
+
 User-agent: *
-Disallow:
+Allow: /
+
+
+Sitemap: https://stroim-s-nami.com.ua/sitemap.xml
