@@ -10,6 +10,8 @@ import { Desivery } from './pages/desiveryPage';
 import { Gallery } from './pages/galleryPage';
 import { Footer } from './footer';
 import { Header } from './header';
+import { MainFormPage } from './formPage';
+import { ThanksPage } from './thanksPage';
 
 
 
@@ -26,6 +28,10 @@ ReactDOM.render(
         <Route path="/aboutus" component={AboutUs} />
         <Route path="/desivery" component={Desivery} />
         <Route path="/gallery" component={Gallery} />
+        <Route path="/form" component={MainFormPage} />
+        <Route path="/thankspage" component={ThanksPage} />
+
+
 
         <Redirect to="/"></Redirect>
       </Switch>

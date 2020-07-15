@@ -72,7 +72,6 @@ body{
 .MainHeader-block2-photo{
     width: 40px;
     height: 40px;
-    margin-right: 20px;
 }
 .MainHeader-block3{
     background-color: var(--black);
@@ -538,6 +537,36 @@ body{
     justify-content: space-around;
     align-items: center;
 }
+.ItemBox-box-secondbox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.ItemBox-box-firstbox-name{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.ItemBox-box-firstbox-price{
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--Orange);
+}
+.ItemBox-box-secondbox a{
+    border: 2px solid;
+    padding: 10px 30px;
+}
+.ItemBox-box-secondbox a:hover{
+    transition: 0.5s;
+    border: 2px solid var(--black);
+    background-color: var(--black);
+    padding: 10px 30px;
+    box-shadow: 0px 0px 8px 0px rgba(25,26,30,0.75);
+    color: white;
+
+}
 .hide{
     display: none;
 }
@@ -595,7 +624,7 @@ body{
     width: 65%;
     height: inherit;
     background-size: 145%;
-    background-image: url(header-photo.jpg);
+    background-image: url(bg.jpg);
     background-repeat: no-repeat;
 }
 .Aboutus-Header-rightSide{
@@ -611,6 +640,10 @@ body{
     text-transform: uppercase;
     font-weight: bold;
 }
+.Aboutus-Header-leftSide-title-mobile, .AboutUsMain-mobile{
+    display: none;
+}
+
 .Aboutus-Header-leftSide-line{
     margin: 80px 20px 80px 150px;
     width: 10px;
@@ -769,6 +802,10 @@ body{
     flex-direction: column;
     margin: 40px 0 80px 0;
 }
+.AboutUsMain-whyus-container-box img{
+    width: 100px;
+    height: 100px;
+}
 .AboutUsMain-whyus-title{
     display: flex;
     flex-direction: column;
@@ -807,6 +844,9 @@ body{
 }
 .AboutUsMain-video{
     display: flex;
+}
+.AboutUsMain-video-mobile-title{
+    display: none;
 }
 .AboutUsMain-video-text{
     width: 30%;
@@ -887,6 +927,101 @@ body{
     text-align: center;
     font-size: 18px;
     line-height: 25px;
+}
+#ThanksPage{
+    display: flex;
+    margin: 200px 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.ThanksPage-text{
+    font-size: 32px;
+    font-weight: bold;
+}
+.ThanksPage-button{
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: solid 1px var(--Orange);
+    background-color: var(--Orange);
+}
+.ThanksPage-button:hover{
+    transition: 0.5s;
+    box-shadow: 0px 0px 10px 0px rgba(255,204,0,1);
+}
+#GalleryPage{
+    padding: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.GalleryPage-buttonBox-button{
+    display: flex;
+    justify-content: center;
+}
+.GalleryPage-buttonBox-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform-origin: top;
+    background-color: var(--Orange);
+    box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.15);
+    transition: 0.5s;
+    transform: scaleY(0) translateY(-20%);
+    height: 0px;
+    opacity: 0;
+}
+.GalleryPage-buttonBox-box_active {
+    height: 340px;
+    transform: scaleY(1) translateY(0%);
+    opacity: 1;
+}
+.GalleryPage-buttonBox-box a{
+    font-size: 18px;
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+
+}
+.GalleryPage-buttonBox-box a:hover{
+    transition: 0.5s;
+    color: white;
+    background-color: var(--black);
+}
+.GalleryPage-buttonBox-button{
+    font-size: 22px;
+    font-weight: bold;
+    margin: 10px;
+    border: 2px solid var(--black);
+    padding: 20px;
+}
+.GalleryPage-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 1175px;
+}
+.PhotoBox-photo{
+    width: 350px;
+    height: 200px;
+    margin: 20px;
+}
+.PhotoBox-photo:hover{
+    transition: 0.5s;
+    width: 355px;
+    height: 205px;
+    margin: 20px;
+}
+.GalleryPage-container-arrows{
+    display: flex;
+    margin: 0 auto;
+}
+.GalleryPage-container-arrow{
+    padding: 20px;
+    font-size: 35px;
 }
 
 /*<________________________________________________ADAPTATION_____________________________________________________________>*/
@@ -1013,6 +1148,7 @@ body{
     }
     #Footer{
         align-items: flex-start;
+        height: 330px;
     }
     .Footer-nav{
         display: none;
@@ -1087,11 +1223,12 @@ body{
     }
     .OurPropose-container-box {
         width: 310px;
+        height: 680px;
         margin-right: 0px;
     }
     .OurPropose-container-box-desc {
-        width: 230px;
-        margin: 10px 40px;
+        font-size: 16px;
+        margin: 10px 25px;
     }
     .Header-headline1 {
         font-size: 16px;
@@ -1112,5 +1249,192 @@ body{
     }
     .Header-container {
         height: 200px;
+    }
+    .OurPropose-container-box-photo{
+        width: 310px;
+        height: 200px;
+        box-shadow: 0px 0px 25px 1px rgba(0,0,0,0.2);
+    }
+    .OurPropose-container-box-border {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+        border: 1px solid rgba(25,26,30,0.2);
+        height: 420px;
+    }
+    .OurPropose-title {
+        font-size: 22px;
+        font-weight: bold;
+        text-align: center;
+        margin: 30px auto 15px auto;
+    }
+    .Aboutus-Header-rightSide{
+        display: none;
+    }
+    .Aboutus-Header-leftSide{
+        width: 100%;
+        background-size: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .Aboutus-Header-leftSide-line {
+        display: none;
+    }
+    .Aboutus-Header-leftSide-headline{
+        font-size: 16px;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .Aboutus-Header-leftSide-desc, .Aboutus-Header-leftSide-button,
+    .AboutUsMain-video-box,.AboutUsMain-aboutus,
+    .AboutUsMain-video-text {
+        display: none;
+    }
+    .Aboutus-Header-leftSide-title-mobile{
+        display: flex;
+        color: var(--Orange);
+    }
+    .Aboutus-Header-leftSide-title {
+        display: flex;
+        flex-direction: column;
+    }
+    #Aboutus-Header {
+        height: 155px;
+        display: flex;
+    }
+    .AboutUsMain-mobile{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 20px 0;
+    }
+    .AboutUsMain-mobile-title{
+        font-size: 22px;
+        font-weight: bold;
+        margin: 20px 0;
+    }
+    .AboutUsMain-consultation {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .AboutUsMain-consultation-title {
+        margin: 20px 0;
+
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    .AboutUsMain-video {
+        display: flex;
+        justify-content: center;
+        box-shadow: 0px 0px 60px -10px rgba(0,0,0,0.44);
+        max-width: 440px;
+        height: 220px;
+        margin: 0;
+    }
+
+    .AboutUsMain-video-iframe{
+        width: 320px;
+        height: 220px;
+    }
+    .AboutUsMain-video-mobile-title{
+        display: flex;
+        font-size: 22px;
+        margin: -70px 0 30px 0;
+
+        font-weight: bold;
+        justify-content: center;
+        text-align: center;
+    }
+    .AboutUsMain-whyus-line {
+        margin: 10px 0;
+    }
+    .AboutUsMain-whyus-title {
+        font-size: 22px;
+        font-weight: bold;
+    }
+    .MarketMain-container1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .MarketMain-container1-search, .MarketMain-container1-price, .MarketMain-container1-filter {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 15px 0;
+    }
+    #ItemBox {
+        width: 312px;
+        height: 312px;
+    }
+    .MarketMain-container1-search-box {
+        padding: 10px;
+        margin-left: 10px;
+    }
+    .MarketMain-input {
+        font-size: 14px;
+        width: 230px;
+    }
+    #Price{
+        display: flex;
+        flex-direction: column;
+    }
+    .Price-button {
+        margin: 10px 0;
+    }
+    .MarketMain-filter {
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        margin: 10px;
+    }
+    .MarketMain-filter-button {
+        margin: 10px 5px;
+    }
+    .Header-button-market {
+        font-size: 14px;
+        padding: 12px 50px;
+        border: 2px solid var(--Orange);
+    }
+    .Market-header-button {
+        font-size: 14px;
+        width: 220px;
+        height: 0px;
+    }
+    .Market-header-button_active {
+        height: 100%;
+        transition: 1s;
+        transform: scaleY(1);
+        background-color: var(--Orange);
+        opacity: 1;
+    }
+    .GalleryPage-container {
+        width: 310px;
+        justify-content: center;
+    }
+    .PhotoBox-photo {
+        width: 240px;
+        height: 125px;
+        margin: 5px;
+    }
+    .GalleryPage-buttonBox-button {
+        font-size: 18px;
+    }
+    .GalleryPage-instruction{
+        font-size: 14px;
+        text-align: center;
+    }
+    .PhotoBox-photo:hover{
+        transition: 0.5s;
+        width: 310px;
+        height: 205px;
+        margin: 20px;
     }
 }

@@ -107,12 +107,12 @@ export class Footer extends React.Component{
                     <div className="Footer-mobile-socialmedia">
                         <div className="Footer-mobile-socialmedia-box">
                             <a target="_blank" href="https://www.instagram.com/stroim.s.nami/">
-                                <img className="Footer-mobile-icon" src="instagram.svg" alt="icon"></img>
+                                <img className="Footer-mobile-icon" src="/instagram.svg" alt="icon"></img>
                             </a>
                         </div>
                         <div className="Footer-mobile-socialmedia-box">
                             <a target="_blank" href="https://www.facebook.com/ZaborVorotaPoltava">
-                                <img className="Footer-mobile-icon" src="facebook.svg" alt="icon"></img>
+                                <img className="Footer-mobile-icon" src="/facebook.svg" alt="icon"></img>
                             </a>
                         </div>
                     </div>

@@ -30,7 +30,8 @@ class Header extends React.Component{
                 <div className="Aboutus-Header-leftSide">
                     <div className="Aboutus-Header-leftSide-title">
                         <div className="Aboutus-Header-leftSide-line"></div>
-                        <h1>Еврозабор, ворота, автоматика</h1>
+                        <div className="Aboutus-Header-leftSide-title-mobile">Строи с Нами</div>
+                        <h1 className="Aboutus-Header-leftSide-headline">Еврозабор, ворота, автоматика</h1>
                     </div>
                     <div className="Aboutus-Header-leftSide-desc">
                         Еврозабор собственного производства. На сегодняшний день это оптимальный вариант, соотношения цены и качества при выборе и строительстве забора. Еврозабор имеет ряд достоинств, перед иными капитальными строениями. Сами плиты еврозабора изготовлены из качественного материала.
@@ -84,6 +85,18 @@ class Main extends React.Component{
     render(){
         return(
             <div id="AboutUsMain">
+                <section className="AboutUsMain-mobile">
+                    <div className="AboutUsMain-mobile-title">О нас</div>
+                    <div className="AboutUsMain-mobile-desc">
+                        Еврозабор собственного производства. На сегодняшний день это оптимальный вариант,
+                        соотношения цены и качества при выборе и строительстве забора.
+                        <br />
+                        <br />
+                        Еврозабор имеет ряд достоинств, перед иными капитальными строениями.
+                        Сами плиты еврозабора изготовлены из качественного материала.
+                        Выполняем работу любой сложности!
+                    </div>
+                </section>
                 <section className="AboutUsMain-consultation">
                     <div className="AboutUsMain-consultation-title">
                         Получите Бесплатную Консультацию
@@ -137,31 +150,34 @@ class Main extends React.Component{
                     </div>
                     <div className="AboutUsMain-whyus-container">
                         <div className="AboutUsMain-whyus-container-box">
-                            <img alt="icon"></img>
+                            <img src="/company.svg" alt="icon"></img>
                             <div className="AboutUsMain-whyus-container-box-title">Собственное производство</div>
                         </div>
                         <div className="AboutUsMain-whyus-container-box">
-                            <img alt="icon"></img>
+                            <img src="/factory.svg" alt="icon"></img>
                             <div className="AboutUsMain-whyus-container-box-title">Постоянное наличие продукции на складе</div>
                         </div>
                         <div className="AboutUsMain-whyus-container-box">
-                            <img alt="icon"></img>
+                            <img src="/checkmark.svg" alt="icon"></img>
                             <div className="AboutUsMain-whyus-container-box-title">Многолетний опыт работы</div>
                         </div>
                         <div className="AboutUsMain-whyus-container-box">
-                            <img alt="icon"></img>
+                            <img src="/shield.svg" alt="icon"></img>
                             <div className="AboutUsMain-whyus-container-box-title">Лояльная ценовая политика</div>
                         </div>
                         <div className="AboutUsMain-whyus-container-box">
-                            <img alt="icon"></img>
+                            <img src="/checklist.svg" alt="icon"></img>
                             <div className="AboutUsMain-whyus-container-box-title">Широкий ассортимент продукции</div>
                         </div>
                         <div className="AboutUsMain-whyus-container-box">
-                            <img alt="icon"></img>
+                            <img src="/shield1.svg" alt="icon"></img>
                             <div className="AboutUsMain-whyus-container-box-title">Жёсткий контроль качества</div>
                         </div>
                     </div>
                 </section>
+                
+                <div className="AboutUsMain-video-mobile-title">Видео о нас</div>
+
                 <section className="AboutUsMain-video">
                     <div className="AboutUsMain-video-text">
                         <div className="AboutUsMain-video-text-title">
@@ -175,7 +191,7 @@ class Main extends React.Component{
                     </div>
                     <div>
                         <div>
-                            <iframe width="760" height="562" src="https://www.youtube.com/embed/FDLvhmlRbRA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <iframe className="AboutUsMain-video-iframe" width="760" height="562" src="https://www.youtube.com/embed/FDLvhmlRbRA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
                         <div className="AboutUsMain-video-box">
                             <div className="AboutUsMain-video-box-box-1">

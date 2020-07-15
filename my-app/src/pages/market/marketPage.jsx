@@ -119,6 +119,7 @@ function MarketLinks(){
                 <Link className="HeaderLink" to={`${url}/parking`}>Шлагбаумы и парковки</Link>
                 <Link className="HeaderLink" to={`${url}/tile`}>Плитка</Link>
                 <Link className="HeaderLink" to={`${url}/thermofacade`}>Термофасад</Link>
+                <a href="/market">Свернуть</a>
             </nav>
         </div>
     )
@@ -219,7 +220,7 @@ class MarketMain extends React.Component{
         button[0].classList.remove(style)
 
 
-        const arr = this.itemBox
+        const arr = this.state.itemBox
         const newArr1 = arr.sort(function(a, b) {
             if (a.props.price > b.props.price) return -1;
             if (a.props.price == b.props.price) return 0;
@@ -306,11 +307,13 @@ class ItemBox extends React.Component{
                 <img className="ItemBox-photo" src="/OurPropose-photo.jpeg"></img>
                 <div className='ItemBox-box'>
                     <div className="ItemBox-box-firstbox">
-                        <div className="ItemBox-box-firstbox-name">{this.props.name}</div>
+                        <div className="ItemBox-box-firstbox-name">
+                            <div>{this.props.name}</div>
+                            <div className="ItemBox-box-firstbox-price">{this.props.price}грн</div>
+                        </div>
                     </div>
                     <div className="ItemBox-box-secondbox">
-                        <div>{this.props.price}</div>
-                        <a href='/'>Заказать</a>
+                        <a href='/form'>Заказать</a>
                     </div>
                 </div>
             </div>
@@ -354,6 +357,7 @@ class Fences extends React.Component{
                 <ItemBox category="Сетка рабица" name="Забор сетка рабица" price={55} />,
                 <ItemBox category="Комбинированный" name="Еврозабор Комбинированный" price={34} />,
             ],
+            category: 'all',
         }
         
     }
@@ -361,11 +365,22 @@ class Fences extends React.Component{
         e.preventDefault()
         const button = document.getElementsByClassName('Price-button')
         const style = 'Price-button_active'
+        
+        const button1 = document.getElementsByClassName('MarketMain-filter-button')
+        const style1 = 'MarketMain-filter-button_active'
+
+        button1[0].classList.add(style1)
+        button1[1].classList.remove(style1)
+        button1[2].classList.remove(style1)
+        button1[3].classList.remove(style1)
+        button1[4].classList.remove(style1)
+        button1[5].classList.remove(style1)
 
         button[0].classList.add(style)
         button[1].classList.remove(style)
-
+         
         const arr = this.itemBox
+
         const newArr1 = arr.sort(function(a, b) {
             if (a.props.price > b.props.price) return 1;
             if (a.props.price == b.props.price) return 0;
@@ -381,6 +396,16 @@ class Fences extends React.Component{
         e.preventDefault()
         const button = document.getElementsByClassName('Price-button')
         const style = 'Price-button_active'
+
+        const button1 = document.getElementsByClassName('MarketMain-filter-button')
+        const style1 = 'MarketMain-filter-button_active'
+
+        button1[0].classList.add(style1)
+        button1[1].classList.remove(style1)
+        button1[2].classList.remove(style1)
+        button1[3].classList.remove(style1)
+        button1[4].classList.remove(style1)
+        button1[5].classList.remove(style1)
 
         button[1].classList.add(style)
         button[0].classList.remove(style)
@@ -620,26 +645,25 @@ class Gate extends React.Component{
         super()
         this.itemBox = [
             <ItemBox category="Откатные" name="Ворота Откатные" price={100} />,
-            <ItemBox category="Распашные" name="Ворота Распашные" price={80} />,
-            <ItemBox category="Обычные" name="Ворота Обычные" price={90} />,
-            <ItemBox category="Откатные" name="Ворота Распашные" price={55} />,
-            <ItemBox category="Обычные" name="Ворота Обычные" price={34} />,
-            <ItemBox category="Обычные" name="Ворота Обычные" price={15} />,
-            <ItemBox category="Распашные" name="Ворота Распашные" price={64} />,
-            <ItemBox category="Откатные" name="Ворота Откатные" price={75} />,
-            <ItemBox category="Распашные" name="Ворота Распашные" price={24} />,
+            <ItemBox category="Распашные" name="Ворота Распашные" price={100} />,
+            <ItemBox category="Гаражные" name="Ворота Гаражные" price={100} />,
+
         ]
+        this.itemBox1 = [         
+           <ItemBox category="Откатные" name="Ворота Откатные" price={100} />,
+        ]
+        this.itemBox2 = [
+            <ItemBox category="Распашные" name="Ворота Распашные" price={100} />,
+        ]
+        this.itemBox3 = [
+            <ItemBox category="Гаражные" name="Ворота Гаражные" price={100} />,
+        ]
+
         this.state = {
             itemBox: [
                 <ItemBox category="Откатные" name="Ворота Откатные" price={100} />,
-                <ItemBox category="Распашные" name="Ворота Распашные" price={80} />,
-                <ItemBox category="Обычные" name="Ворота Обычные" price={90} />,
-                <ItemBox category="Откатные" name="Ворота Откатные" price={55} />,
-                <ItemBox category="Обычные" name="Ворота Обычные" price={34} />,
-                <ItemBox category="Обычные" name="Ворота Обычные" price={15} />,
-                <ItemBox category="Распашные" name="Ворота Распашные" price={64} />,
-                <ItemBox category="Откатные" name="Ворота Откатные" price={75} />,
-                <ItemBox category="Распашные" name="Ворота Распашные" price={24} />,
+                <ItemBox category="Распашные" name="Ворота Распашные" price={100} />,
+                <ItemBox category="Гаражные" name="Ворота Гаражные" price={100} />,
             ],
         }
         
@@ -648,6 +672,14 @@ class Gate extends React.Component{
         e.preventDefault()
         const button = document.getElementsByClassName('Price-button')
         const style = 'Price-button_active'
+
+        const button1 = document.getElementsByClassName('MarketMain-filter-button')
+        const style1 = 'MarketMain-filter-button_active'
+
+        button1[0].classList.add(style1)
+        button1[1].classList.remove(style1)
+        button1[2].classList.remove(style1)
+        button1[3].classList.remove(style1)
 
         button[0].classList.add(style)
         button[1].classList.remove(style)
@@ -669,6 +701,14 @@ class Gate extends React.Component{
         const button = document.getElementsByClassName('Price-button')
         const style = 'Price-button_active'
 
+        const button1 = document.getElementsByClassName('MarketMain-filter-button')
+        const style1 = 'MarketMain-filter-button_active'
+
+        button1[0].classList.add(style1)
+        button1[1].classList.remove(style1)
+        button1[2].classList.remove(style1)
+        button1[3].classList.remove(style1)
+
         button[1].classList.add(style)
         button[0].classList.remove(style)
 
@@ -685,6 +725,89 @@ class Gate extends React.Component{
             })
         }
 
+    }
+    ToAll(e){
+        e.preventDefault()
+
+        const button = document.getElementsByClassName('MarketMain-filter-button')
+        const style = 'MarketMain-filter-button_active'
+
+
+        button[0].classList.add(style)
+        button[1].classList.remove(style)
+        button[2].classList.remove(style)
+        button[3].classList.remove(style)
+
+
+        const arr = this.itemBox
+        if(arr){
+            this.setState({
+                itemBox: arr,
+            })
+        }
+    }
+    ToItemBox1(e){
+        e.preventDefault()
+
+        const button = document.getElementsByClassName('MarketMain-filter-button')
+        const style = 'MarketMain-filter-button_active'
+
+        button[1].classList.add(style)
+        button[0].classList.remove(style)
+        button[2].classList.remove(style)
+        button[3].classList.remove(style)
+
+
+
+        const arr = this.itemBox1
+        if(arr){
+            this.setState({
+                itemBox: arr,
+            })
+        }
+    }
+
+    ToItemBox2(e){
+        e.preventDefault()
+
+        const button = document.getElementsByClassName('MarketMain-filter-button')
+        const style = 'MarketMain-filter-button_active'
+
+        button[0].classList.remove(style)
+        button[1].classList.remove(style)
+        button[2].classList.add(style)
+        button[3].classList.remove(style)
+
+
+
+        const arr = this.itemBox2
+        if(arr){
+            this.setState({
+                itemBox: arr,
+            })
+        }
+    }
+
+    ToItemBox3(e){
+        e.preventDefault()
+
+        const button = document.getElementsByClassName('MarketMain-filter-button')
+        const style = 'MarketMain-filter-button_active'
+
+        button[0].classList.remove(style)
+        button[1].classList.remove(style)
+        button[2].classList.remove(style)
+        button[3].classList.add(style)
+
+
+
+
+        const arr = this.itemBox3
+        if(arr){
+            this.setState({
+                itemBox: arr,
+            })
+        }
     }
     onChange(event){
         let value = event.target.value.trim()
@@ -735,7 +858,18 @@ class Gate extends React.Component{
                     <div className='MarketMain-container1-filter'>
                         <div className="MarketMain-text">Сортировка:</div>
                         <div className="MarketMain-filter">
-                            Выберите категорию товара
+                        <a className="MarketMain-filter-button" onClick={this.ToAll = this.ToAll.bind(this)} href="/">
+                                Все товары
+                            </a>
+                            <a className="MarketMain-filter-button" onClick={this.ToItemBox1 = this.ToItemBox1.bind(this)} href="/">
+                                Ворота откатные
+                            </a>
+                            <a className="MarketMain-filter-button" onClick={this.ToItemBox2 = this.ToItemBox2.bind(this)} href="/">
+                                Ворота роспашные
+                            </a>
+                            <a className="MarketMain-filter-button" onClick={this.ToItemBox3 = this.ToItemBox3.bind(this)} href="/">
+                                Гаражные Ворота
+                            </a>
                         </div>
                     </div>
                 </div>
