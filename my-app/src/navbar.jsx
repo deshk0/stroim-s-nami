@@ -42,7 +42,7 @@ export class Navbar extends React.Component{
                 <a className="Navbar-href" style={{borderBottom:`2px solid ${document.location.href === 'http://localhost:3000/' ? 'black' : 'transperent'}`}} href="/">Главная</a>
                 <a className="Navbar-href" style={{borderBottom:`2px solid ${document.location.href === 'http://localhost:3000/aboutus' ? 'black' : 'transperent'}`}} href="/aboutus">О нас</a>
                 <div className="Navbar-href1" onClick={this.onClick = this.onClick.bind(this)} >
-                    <a className="Navbar-href" onClick={this.opa = this.opa.bind(this)} href='/' style={{margin:'22px 0',position:'relative'}}>Товары и услуги<span className="Navbar-arrow"></span></a>
+                    <a className="Navbar-href" onClick={this.opa = this.opa.bind(this)} href='/' style={{margin:'30px 0',position:'relative'}}>Товары и услуги<span className="Navbar-arrow"></span></a>
                     <nav id="Navbar-ProductsAndService" className="Navbar-ProductsAndService" style={{borderBottom:`2px solid ${document.location.href === 'http://localhost:3000/market' ? 'black' : 'transperent'}`}}>
                         <a href="/market">Все товары</a>
                         <a href="/market/fences">Заборы</a>

@@ -68,7 +68,7 @@ class OurPropose extends React.Component{
                         <div className="OurPropose-container-box-border">
                             <div className='OurPropose-container-box-name'>Ворота</div>
                             <div style={{fontSize:'15px'}} className="OurPropose-container-box-desc">
-                                На сегодняшний день компания «Строим с Нами» предлагает ворота собственного производства:
+                                На сегодняшний день компания «Строим с Нами» предлагает ворота:
 
                                     <br />из разных материалов (профнастил, металлические, филенчатые);
                                     <br />учитывая предназначение (въездные, гаражные)

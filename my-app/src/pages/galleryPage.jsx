@@ -6,7 +6,7 @@ export class Gallery extends React.Component{
         super()
 
         this.state = {
-            category: 'Все фотографии'
+            category: 'Вс фотографии'
         }
     }
     onClick(e){

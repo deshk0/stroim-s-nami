@@ -58,7 +58,7 @@ class Header extends React.Component{
                             <div className="Aboutus-Header-rightSide-box-desc">
                                 <div className="Aboutus-Header-rightSide-box-desc-title">Установка забора</div>
                                 <div className="Aboutus-Header-rightSide-box-desc-desc">
-                                    Наша бригада имеет большой опыт в провидении строительно-монтажных работ. С каждым нашим клиентом мы работаем индивидуально.
+                                    Наша бригада имеет большой опыт в проведении строительно-монтажных работ. С каждым нашим клиентом мы работаем индивидуально.
                                 </div>
                             </div>
                         </div>
