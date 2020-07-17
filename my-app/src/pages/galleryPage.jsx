@@ -17,6 +17,16 @@ export class Gallery extends React.Component{
 
         buttonBox.classList.toggle(style)
     }
+    pickAll(e){
+        e.preventDefault()
+        this.setState({
+            category: 'Все фотографии'
+        })
+        const buttonBox = document.getElementById('GalleryPage-buttonBox-box')
+        const style = 'GalleryPage-buttonBox-box_active'
+
+        buttonBox.classList.toggle(style)
+    }
     pickFences(e){
         e.preventDefault()
         this.setState({
@@ -115,6 +125,7 @@ export class Gallery extends React.Component{
                             {this.state.category}
                         </a>
                         <div id="GalleryPage-buttonBox-box" className="GalleryPage-buttonBox-box">
+                            <a onClick={this.pickAll = this.pickAll.bind(this)} href="/">Все фотографии</a>
                             <a onClick={this.pickFences = this.pickFences.bind(this)} href="/">Заборы</a>
                             <a onClick={this.pickGate = this.pickGate.bind(this)} href="/">Ворота</a>
                             <a onClick={this.pickRolls = this.pickRolls.bind(this)} href="/">Роллеты</a>
@@ -130,6 +141,7 @@ export class Gallery extends React.Component{
                     </div>
                     <div className="GalleryPage-container">
                         {
+                            this.state.category === "Все фотографии" ? <AllPhoto /> :
                             this.state.category === "Заборы" ? <FencesPhoto /> :
                             this.state.category === "Ворота" ? <GatesPhoto /> : 
                             this.state.category === "Роллеты" ? <RoolsPhoto /> : 
@@ -240,17 +252,73 @@ class AllPhoto extends React.Component{
 class FencesPhoto extends React.Component{
     constructor(){
         super()
+        this.container = [
+            [
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+            ],
+            [
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+            ],
+            [
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+            ]
+        ]
+        this.state = {
+            index: 0
+        }
     }
+    next(e){
+        e.preventDefault()
+        if(this.state.index < 2){
+                this.setState({
+                    index: this.state.index + 1
+                })
+            console.log(this.state.index)
+        }
+    }
+    prev(e){
+        e.preventDefault()
+        if(this.state.index >= 1){
+                this.setState({
+                    index: this.state.index - 1
+                })
+            console.log(this.state.index)
+        }
+    }
+
 
     render(){
         return(
             <div className="GalleryPage-container">
-                <PhotoBox img="opa" />
-                <PhotoBox img="opa" />
-                <PhotoBox img="opa" />
-                <PhotoBox img="opa" />
-                <PhotoBox img="opa" />
-                <PhotoBox img="opa" />
+                {this.container[this.state.index]}
+                <div className="GalleryPage-container-arrows">
+                    <a onClick={this.prev = this.prev.bind(this)} href="/" className="GalleryPage-container-arrow">←</a>
+                    <a onClick={this.next = this.next.bind(this)} href="/" className="GalleryPage-container-arrow">→</a>
+                </div>
             </div>
         )
     }
@@ -258,12 +326,73 @@ class FencesPhoto extends React.Component{
 class GatesPhoto extends React.Component{
     constructor(){
         super()
+        this.container = [
+            [
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+            ],
+            [
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+            ],
+            [
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+            ]
+        ]
+        this.state = {
+            index: 0
+        }
     }
+    next(e){
+        e.preventDefault()
+        if(this.state.index < 2){
+                this.setState({
+                    index: this.state.index + 1
+                })
+            console.log(this.state.index)
+        }
+    }
+    prev(e){
+        e.preventDefault()
+        if(this.state.index >= 1){
+                this.setState({
+                    index: this.state.index - 1
+                })
+            console.log(this.state.index)
+        }
+    }
+
 
     render(){
         return(
             <div className="GalleryPage-container">
-                Ворота
+                {this.container[this.state.index]}
+                <div className="GalleryPage-container-arrows">
+                    <a onClick={this.prev = this.prev.bind(this)} href="/" className="GalleryPage-container-arrow">←</a>
+                    <a onClick={this.next = this.next.bind(this)} href="/" className="GalleryPage-container-arrow">→</a>
+                </div>
             </div>
         )
     }
@@ -271,12 +400,73 @@ class GatesPhoto extends React.Component{
 class RoolsPhoto extends React.Component{
     constructor(){
         super()
+        this.container = [
+            [
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+            ],
+            [
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+            ],
+            [
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+            ]
+        ]
+        this.state = {
+            index: 0
+        }
     }
+    next(e){
+        e.preventDefault()
+        if(this.state.index < 2){
+                this.setState({
+                    index: this.state.index + 1
+                })
+            console.log(this.state.index)
+        }
+    }
+    prev(e){
+        e.preventDefault()
+        if(this.state.index >= 1){
+                this.setState({
+                    index: this.state.index - 1
+                })
+            console.log(this.state.index)
+        }
+    }
+
 
     render(){
         return(
             <div className="GalleryPage-container">
-                Rolls
+                {this.container[this.state.index]}
+                <div className="GalleryPage-container-arrows">
+                    <a onClick={this.prev = this.prev.bind(this)} href="/" className="GalleryPage-container-arrow">←</a>
+                    <a onClick={this.next = this.next.bind(this)} href="/" className="GalleryPage-container-arrow">→</a>
+                </div>
             </div>
         )
     }
@@ -284,12 +474,73 @@ class RoolsPhoto extends React.Component{
 class AutomationPhoto extends React.Component{
     constructor(){
         super()
+        this.container = [
+            [
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+            ],
+            [
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+            ],
+            [
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+            ]
+        ]
+        this.state = {
+            index: 0
+        }
     }
+    next(e){
+        e.preventDefault()
+        if(this.state.index < 2){
+                this.setState({
+                    index: this.state.index + 1
+                })
+            console.log(this.state.index)
+        }
+    }
+    prev(e){
+        e.preventDefault()
+        if(this.state.index >= 1){
+                this.setState({
+                    index: this.state.index - 1
+                })
+            console.log(this.state.index)
+        }
+    }
+
 
     render(){
         return(
             <div className="GalleryPage-container">
-                Auto
+                {this.container[this.state.index]}
+                <div className="GalleryPage-container-arrows">
+                    <a onClick={this.prev = this.prev.bind(this)} href="/" className="GalleryPage-container-arrow">←</a>
+                    <a onClick={this.next = this.next.bind(this)} href="/" className="GalleryPage-container-arrow">→</a>
+                </div>
             </div>
         )
     }
@@ -297,12 +548,73 @@ class AutomationPhoto extends React.Component{
 class ParkingPhoto extends React.Component{
     constructor(){
         super()
+        this.container = [
+            [
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+            ],
+            [
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+            ],
+            [
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+            ]
+        ]
+        this.state = {
+            index: 0
+        }
     }
+    next(e){
+        e.preventDefault()
+        if(this.state.index < 2){
+                this.setState({
+                    index: this.state.index + 1
+                })
+            console.log(this.state.index)
+        }
+    }
+    prev(e){
+        e.preventDefault()
+        if(this.state.index >= 1){
+                this.setState({
+                    index: this.state.index - 1
+                })
+            console.log(this.state.index)
+        }
+    }
+
 
     render(){
         return(
             <div className="GalleryPage-container">
-                Parking
+                {this.container[this.state.index]}
+                <div className="GalleryPage-container-arrows">
+                    <a onClick={this.prev = this.prev.bind(this)} href="/" className="GalleryPage-container-arrow">←</a>
+                    <a onClick={this.next = this.next.bind(this)} href="/" className="GalleryPage-container-arrow">→</a>
+                </div>
             </div>
         )
     }
@@ -310,12 +622,73 @@ class ParkingPhoto extends React.Component{
 class TilePhoto extends React.Component{
     constructor(){
         super()
+        this.container = [
+            [
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+            ],
+            [
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+            ],
+            [
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+            ]
+        ]
+        this.state = {
+            index: 0
+        }
     }
+    next(e){
+        e.preventDefault()
+        if(this.state.index < 2){
+                this.setState({
+                    index: this.state.index + 1
+                })
+            console.log(this.state.index)
+        }
+    }
+    prev(e){
+        e.preventDefault()
+        if(this.state.index >= 1){
+                this.setState({
+                    index: this.state.index - 1
+                })
+            console.log(this.state.index)
+        }
+    }
+
 
     render(){
         return(
             <div className="GalleryPage-container">
-                Tile
+                {this.container[this.state.index]}
+                <div className="GalleryPage-container-arrows">
+                    <a onClick={this.prev = this.prev.bind(this)} href="/" className="GalleryPage-container-arrow">←</a>
+                    <a onClick={this.next = this.next.bind(this)} href="/" className="GalleryPage-container-arrow">→</a>
+                </div>
             </div>
         )
     }
@@ -323,12 +696,73 @@ class TilePhoto extends React.Component{
 class TileEcoPhoto extends React.Component{
     constructor(){
         super()
+        this.container = [
+            [
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+            ],
+            [
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+            ],
+            [
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+            ]
+        ]
+        this.state = {
+            index: 0
+        }
     }
+    next(e){
+        e.preventDefault()
+        if(this.state.index < 2){
+                this.setState({
+                    index: this.state.index + 1
+                })
+            console.log(this.state.index)
+        }
+    }
+    prev(e){
+        e.preventDefault()
+        if(this.state.index >= 1){
+                this.setState({
+                    index: this.state.index - 1
+                })
+            console.log(this.state.index)
+        }
+    }
+
 
     render(){
         return(
             <div className="GalleryPage-container">
-                TileEco
+                {this.container[this.state.index]}
+                <div className="GalleryPage-container-arrows">
+                    <a onClick={this.prev = this.prev.bind(this)} href="/" className="GalleryPage-container-arrow">←</a>
+                    <a onClick={this.next = this.next.bind(this)} href="/" className="GalleryPage-container-arrow">→</a>
+                </div>
             </div>
         )
     }
@@ -336,12 +770,73 @@ class TileEcoPhoto extends React.Component{
 class ThermofacadePhoto extends React.Component{
     constructor(){
         super()
+        this.container = [
+            [
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+            ],
+            [
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+            ],
+            [
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+                <PhotoBox img="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" />,
+            ]
+        ]
+        this.state = {
+            index: 0
+        }
     }
+    next(e){
+        e.preventDefault()
+        if(this.state.index < 2){
+                this.setState({
+                    index: this.state.index + 1
+                })
+            console.log(this.state.index)
+        }
+    }
+    prev(e){
+        e.preventDefault()
+        if(this.state.index >= 1){
+                this.setState({
+                    index: this.state.index - 1
+                })
+            console.log(this.state.index)
+        }
+    }
+
 
     render(){
         return(
             <div className="GalleryPage-container">
-                TileEco
+                {this.container[this.state.index]}
+                <div className="GalleryPage-container-arrows">
+                    <a onClick={this.prev = this.prev.bind(this)} href="/" className="GalleryPage-container-arrow">←</a>
+                    <a onClick={this.next = this.next.bind(this)} href="/" className="GalleryPage-container-arrow">→</a>
+                </div>
             </div>
         )
     }

@@ -975,7 +975,7 @@ body{
     opacity: 0;
 }
 .GalleryPage-buttonBox-box_active {
-    height: 340px;
+    height: 380px;
     transform: scaleY(1) translateY(0%);
     opacity: 1;
 }

@@ -88,6 +88,7 @@ export class Market extends React.Component{
                                     document.location.href === "http://localhost:3000/market/automation" ? 'Автоматика для ворот' : 
                                     document.location.href === "http://localhost:3000/market/parking" ? 'Шлагбаумы и парковки' : 
                                     document.location.href === "http://localhost:3000/market/tile" ? 'Плитка' : 
+                                    document.location.href === "http://localhost:3000/market/tileeco" ? 'Плитка "Экология"' : 
                                     document.location.href === "http://localhost:3000/market/thermofacade" ? 'Термофасад' : ''
                                 }
                                 </div>
@@ -118,6 +119,7 @@ function MarketLinks(){
                 <Link className="HeaderLink" to={`${url}/automation`}>Автоматика для ворот</Link>
                 <Link className="HeaderLink" to={`${url}/parking`}>Шлагбаумы и парковки</Link>
                 <Link className="HeaderLink" to={`${url}/tile`}>Плитка</Link>
+                <Link className="HeaderLink" to={`${url}/tileeco`}>Плитка "Экология"</Link>
                 <Link className="HeaderLink" to={`${url}/thermofacade`}>Термофасад</Link>
                 <a href="/market">Свернуть</a>
             </nav>
@@ -154,6 +156,7 @@ function Topic() {
             topicId === 'automation' ? <Automation /> : 
             topicId === 'parking' ? <Parking /> : 
             topicId === 'tile' ? <Tile /> : 
+            topicId === 'tileeco' ? <TileEco /> : 
             topicId === 'thermofacade' ? <Thermofacade /> :  ''
             
             }
@@ -1306,6 +1309,141 @@ class Tile extends React.Component{
         this.state = {
             itemBox: [
                 <ItemBox category="Откатные" name="Плитка Откатные" price={100} />,
+                <ItemBox category="Распашные" name="Плитка Распашные" price={80} />,
+                <ItemBox category="Обычные" name="Плитка Обычные" price={90} />,
+                <ItemBox category="Откатные" name="Плитка Откатные" price={55} />,
+                <ItemBox category="Обычные" name="Плитка Обычные" price={34} />,
+                <ItemBox category="Обычные" name="Плитка Обычные" price={15} />,
+                <ItemBox category="Распашные" name="Плитка Распашные" price={64} />,
+                <ItemBox category="Откатные" name="Плитка Откатные" price={75} />,
+                <ItemBox category="Распашные" name="Плитка Распашные" price={24} />,
+            ],
+        }
+        
+    }
+    FromCheapToExpensive(e){
+        e.preventDefault()
+        const button = document.getElementsByClassName('Price-button')
+        const style = 'Price-button_active'
+
+        button[0].classList.add(style)
+        button[1].classList.remove(style)
+
+        const arr = this.itemBox
+        const newArr1 = arr.sort(function(a, b) {
+            if (a.props.price > b.props.price) return 1;
+            if (a.props.price == b.props.price) return 0;
+            if (a.props.price < b.props.price) return -1;
+        });
+        if(newArr1){
+            this.setState({
+                itemBox: newArr1,
+            })
+        }
+    }
+    FromExpensiveToCheap(e){
+        e.preventDefault()
+        const button = document.getElementsByClassName('Price-button')
+        const style = 'Price-button_active'
+
+        button[1].classList.add(style)
+        button[0].classList.remove(style)
+
+
+        const arr = this.itemBox
+        const newArr1 = arr.sort(function(a, b) {
+            if (a.props.price > b.props.price) return -1;
+            if (a.props.price == b.props.price) return 0;
+            if (a.props.price < b.props.price) return 1;
+        });
+        if(newArr1){
+            this.setState({
+                itemBox: newArr1,
+            })
+        }
+
+    }
+    onChange(event){
+        let value = event.target.value.trim()
+        let newValue = value.toLowerCase()
+
+        const Product = document.getElementById('ItemBox1')
+        let Items = document.querySelectorAll('.ItemBox1')
+        console.log(newValue)
+        console.log(this.itemBox)
+        console.log(Items)
+
+        if(newValue != ''){
+            Items.forEach(function(elem){
+                if(elem.innerText.toLowerCase().search(newValue) == -1){
+                    elem.classList.add("hide")  
+                }else{
+                    elem.classList.remove("hide")  
+                }
+            })
+        }else{
+            Items.forEach(function(elem){
+                elem.classList.remove("hide")  
+            })
+        }
+        
+    }
+
+    render(){
+        return(
+            <div id='MarketMain'>
+                <div className='MarketMain-container1' >
+                    <div className='MarketMain-container1-search'>
+                        <div className="MarketMain-text">Поиск товара:</div>
+                        <div className='MarketMain-container1-search-box'>
+                            <input className="MarketMain-input" onChange={this.onChange = this.onChange.bind(this)} type="text" placeholder="Введите название или тип товара" ></input>
+                            <img className="MarketMain-search-icon" src="/search-2.svg" alt="icon"></img>
+                        </div>
+                    </div>
+                    <div className="MarketMain-container1-price">
+                        <div className="MarketMain-text">По цене:</div>
+                        <div id="Price">
+                            <a className="Price-button" onClick={this.FromCheapToExpensive = this.FromCheapToExpensive.bind(this)} href="/">От дешёвых к дорогим</a>
+                            <a className="Price-button" onClick={this.FromExpensiveToCheap = this.FromExpensiveToCheap.bind(this)} href="/">От дорогих к дешёвым</a>
+                        </div>
+                    </div>
+                </div>
+                <div className='MarketMain-container2' >
+                    <div className='MarketMain-container1-filter'>
+                        <div className="MarketMain-text">Сортировка:</div>
+                        <div className="MarketMain-filter">
+                            Выберите категорию товара
+                        </div>
+                    </div>
+                </div>
+                <div className='MarketMain-container3' >
+                    <div className="MarketMain-container3-box">
+                        {this.state.itemBox}
+                    </div>
+                </div>
+            </div>
+        )
+    }
+
+    
+}
+class TileEco extends React.Component{
+    constructor(){
+        super()
+        this.itemBox = [
+            <ItemBox category="Да" name="Плитка Откатные 1" price={100} />,
+            <ItemBox category="Распашные" name="Плитка Распашные" price={80} />,
+            <ItemBox category="Обычные" name="Плитка Обычные" price={90} />,
+            <ItemBox category="Откатные" name="Плитка Распашные" price={55} />,
+            <ItemBox category="Обычные" name="Плитка Обычные" price={34} />,
+            <ItemBox category="Обычные" name="Плитка Обычные" price={15} />,
+            <ItemBox category="Распашные" name="Плитка Распашные" price={64} />,
+            <ItemBox category="Откатные" name="Плитка Откатные" price={75} />,
+            <ItemBox category="Распашные" name="Плитка Распашные" price={24} />,
+        ]
+        this.state = {
+            itemBox: [
+                <ItemBox category="Да" name="Плитка Откатные 1" price={100} />,
                 <ItemBox category="Распашные" name="Плитка Распашные" price={80} />,
                 <ItemBox category="Обычные" name="Плитка Обычные" price={90} />,
                 <ItemBox category="Откатные" name="Плитка Откатные" price={55} />,

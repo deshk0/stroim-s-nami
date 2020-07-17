@@ -54,7 +54,7 @@ class OurPropose extends React.Component{
                 <div className="OurPropose-line"></div>
                 <div className="OurPropose-container">
                     <div className="OurPropose-container-box">
-                        <img className="OurPropose-container-box-photo" src="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" alt="OurPropose-photo"></img>
+                        <img className="OurPropose-container-box-photo" src="https://www.dropbox.com/s/ytptmk1cynvsghf/%D0%BA%D0%B0%D1%80%D0%BF%D0%B0%D1%82%D1%81%D0%BA%D0%B8%D0%B9%20%D0%BA%D0%B0%D0%BC%D0%B5%D0%BD%D1%8C%20%20%2833%29.jpg?dl=1" alt="OurPropose-photo"></img>
                         <div className="OurPropose-container-box-border">
                             <div className='OurPropose-container-box-name'>Заборы</div>
                             <div className="OurPropose-container-box-desc">
@@ -80,7 +80,7 @@ class OurPropose extends React.Component{
                         </div>
                     </div>
                     <div className="OurPropose-container-box">
-                        <img className="OurPropose-container-box-photo" src="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" alt="OurPropose-photo"></img>
+                        <img className="OurPropose-container-box-photo" src="https://www.dropbox.com/s/sbmh279tf88273m/%D0%BA%D0%B0%D1%80%D0%BF%D0%B0%D1%82%D1%81%D0%BA%D0%B8%D0%B9%20%D0%BA%D0%B0%D0%BC%D0%B5%D0%BD%D1%8C%20%2813%29.JPG?dl=1" alt="OurPropose-photo"></img>
                         <div className="OurPropose-container-box-border">
                             <div className='OurPropose-container-box-name'>Покраска</div>
                             <div className="OurPropose-container-box-desc">
@@ -90,7 +90,7 @@ class OurPropose extends React.Component{
                         </div>
                     </div>
                     <div className="OurPropose-container-box">
-                        <img className="OurPropose-container-box-photo" src="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" alt="OurPropose-photo"></img>
+                        <img className="OurPropose-container-box-photo" src="https://www.dropbox.com/s/9mvrgdmdjxz6p0v/36272082_211565929487419_1708950749590847488_n.jpg?dl=1" alt="OurPropose-photo"></img>
                         <div className="OurPropose-container-box-border">
                             <div className='OurPropose-container-box-name'>Автоматика для ворот</div>
                             <div className="OurPropose-container-box-desc">
@@ -100,7 +100,7 @@ class OurPropose extends React.Component{
                         </div>
                     </div>
                     <div className="OurPropose-container-box">
-                        <img className="OurPropose-container-box-photo" src="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" alt="OurPropose-photo"></img>
+                        <img className="OurPropose-container-box-photo" src="https://www.dropbox.com/s/nt7bd9qflxk29pm/%D1%80%D0%BE%D0%BB%D0%BB%D0%B5%D1%82%D1%8B%20%288%29.jpg?dl=1" alt="OurPropose-photo"></img>
                         <div className="OurPropose-container-box-border">
                             <div className='OurPropose-container-box-name'>Роллеты</div>
                             <div className="OurPropose-container-box-desc">
@@ -110,7 +110,7 @@ class OurPropose extends React.Component{
                         </div>
                     </div>
                     <div className="OurPropose-container-box">
-                        <img className="OurPropose-container-box-photo" src="https://www.dropbox.com/s/1nf4j2oxb1rv6of/OurPropose-photo.jpg?dl=1" alt="OurPropose-photo"></img>
+                        <img className="OurPropose-container-box-photo" src="https://www.dropbox.com/s/nqmo8dyvw0kwqos/%D0%BF%D0%BB%D0%B8%D1%82%D0%BA%D0%B0%20%D1%8D%D0%BA%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D1%8F%20%288%29.jpg?dl=1" alt="OurPropose-photo"></img>
                         <div className="OurPropose-container-box-border">
                             <div className='OurPropose-container-box-name'>Плитка "Экология"</div>
                             <div className="OurPropose-container-box-desc">
