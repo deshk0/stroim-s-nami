@@ -51,6 +51,7 @@ export class Navbar extends React.Component{
                         <a href="/market/automation">Автоматика для ворот</a>
                         <a href="/market/parking">Шлагбаумы и парковки</a>
                         <a href="/market/tile">Плитка</a>
+                        <a href="/market/tileeco">Плитка "Экология"</a>
                         <a href="/market/thermofacade">Термофасад</a>
                     </nav>
                 </div>
