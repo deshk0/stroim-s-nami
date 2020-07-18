@@ -80,7 +80,7 @@ class OurPropose extends React.Component{
                         </div>
                     </div>
                     <div className="OurPropose-container-box">
-                        <img className="OurPropose-container-box-photo" src="https://www.dropbox.com/s/sbmh279tf88273m/%D0%BA%D0%B0%D1%80%D0%BF%D0%B0%D1%82%D1%81%D0%BA%D0%B8%D0%B9%20%D0%BA%D0%B0%D0%BC%D0%B5%D0%BD%D1%8C%20%2813%29.JPG?dl=1" alt="OurPropose-photo"></img>
+                        <img className="OurPropose-container-box-photo" src="https://www.dropbox.com/s/odhoy98hup6a08y/%D0%BA%D0%B0%D1%80%D0%BF%D0%B0%D1%82%D1%81%D0%BA%D0%B8%D0%B9%20%D0%BA%D0%B0%D0%BC%D0%B5%D0%BD%D1%8C%20%2815%29.JPG?dl=1" alt="OurPropose-photo"></img>
                         <div className="OurPropose-container-box-border">
                             <div className='OurPropose-container-box-name'>Покраска</div>
                             <div className="OurPropose-container-box-desc">
