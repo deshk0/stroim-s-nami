@@ -307,12 +307,12 @@ class ItemBox extends React.Component{
         return(
             <div className="ItemBox1">
             <div id="ItemBox">
-                <img className="ItemBox-photo" src="/OurPropose-photo.jpeg"></img>
+                <img className="ItemBox-photo" src={this.props.img}></img>
                 <div className='ItemBox-box'>
                     <div className="ItemBox-box-firstbox">
                         <div className="ItemBox-box-firstbox-name">
                             <div>{this.props.name}</div>
-                            <div className="ItemBox-box-firstbox-price">{this.props.price}грн</div>
+                            <div className="ItemBox-box-firstbox-price">От {this.props.price}{this.props.cube} </div>
                         </div>
                     </div>
                     <div className="ItemBox-box-secondbox">
@@ -328,37 +328,37 @@ class Fences extends React.Component{
     constructor(){
         super()
         this.itemBox = [
-            <ItemBox category="Еврозабор" name="Еврозабор" price={100} />,
-            <ItemBox category="Еврозабор с покраской" name="Еврозабор с покраской" price={80} />,
-            <ItemBox category="Секционный металический" name="Забор метал-сетка" price={90} />,
-            <ItemBox category="Сетка рабица" name="Забор сетка рабица" price={55} />,
-            <ItemBox category="Комбинированный" name="Еврозабор Комбинированный" price={34} />,
+            <ItemBox category="Еврозабор" name="Еврозабор" price={285} cube="грн. п.м" />,
+            <ItemBox category="Еврозабор с покраской" name="Еврозабор с покраской" price={75} cube="грн. кв.м" />,
+            <ItemBox category="Секционный металический" name="Забор металл-сетка" price={306} cube="грн. п.м" />,
+            <ItemBox category="Сетка рабица" name="Забор сетка рабица" price={140} cube="грн. столб" />,
+            <ItemBox category="Комбинированный" name="Еврозабор Комбинированный" price='' cube=" Цена договорная" />,
         ]
         this.itemBox1 = [
-            <ItemBox category="Еврозабор" name="Еврозабор" price={100} />,
+            <ItemBox category="Еврозабор" name="Еврозабор" price={285} cube="грн. п.м" />,
             <ItemBox category="Еврозабор" name="Еврозабор" price={10} />
 
         ]
         this.itemBox2 = [
-            <ItemBox category="Еврозабор с покраской" name="Еврозабор с покраской" price={100} />
+            <ItemBox category="Еврозабор с покраской" name="Еврозабор с покраской" price={75} cube="грн. кв.м" />
         ]
         this.itemBox3 = [
-            <ItemBox category="Секционный металический" name="Забор метал-сетка" price={100} />
+            <ItemBox category="Секционный металический" name="Забор металл-сетка" price={306} cube="грн. п.м" />
         ]
         this.itemBox4 = [
-            <ItemBox category="Сетка рабица" name="Еврозабор Сетка рабица" price={100} />
+            <ItemBox category="Сетка рабица" name="Еврозабор Сетка рабица" price={140} cube="грн. столб" />
         ]
         this.itemBox5 = [
-            <ItemBox category="Комбинированный" name="Еврозабор Комбинированный" price={100} />
+            <ItemBox category="Комбинированный" name="Еврозабор Комбинированный" price='' cube=" Цена договорная" />
         ]
         
         this.state = {
             itemBox: [
-                <ItemBox category="Еврозабор" name="Еврозабор" price={100} />,
-                <ItemBox category="Еврозабор с покраской" name="Еврозабор с покраской" price={80} />,
-                <ItemBox category="Секционный металический" name="Забор метал-сетка" price={90} />,
-                <ItemBox category="Сетка рабица" name="Забор сетка рабица" price={55} />,
-                <ItemBox category="Комбинированный" name="Еврозабор Комбинированный" price={34} />,
+                <ItemBox category="Еврозабор" name="Еврозабор" price={285} cube="грн. п.м" />,
+                <ItemBox category="Еврозабор с покраской" name="Еврозабор с покраской" price={75} cube="грн. кв.м" />,
+                <ItemBox category="Секционный металический" name="Забор металл-сетка" price={306} cube="грн. п.м" />,
+                <ItemBox category="Сетка рабица" name="Забор сетка рабица" price={140} cube="грн. столб" />,
+                <ItemBox category="Комбинированный" name="Еврозабор Комбинированный" price='' cube=" Цена договорная" />,
             ],
             category: 'all',
         }
@@ -643,30 +643,31 @@ class Fences extends React.Component{
 
     
 }
+
 class Gate extends React.Component{
     constructor(){
         super()
         this.itemBox = [
-            <ItemBox category="Откатные" name="Ворота Откатные" price={100} />,
-            <ItemBox category="Распашные" name="Ворота Распашные" price={100} />,
-            <ItemBox category="Гаражные" name="Ворота Гаражные" price={100} />,
+            <ItemBox category="Откатные" name="Ворота Откатные" price="Цена договорная" />,
+            <ItemBox category="Распашные" name="Ворота Распашные" price="Цена договорная" />,
+            <ItemBox category="Гаражные" name="Ворота Гаражные" price="Цена договорная" />,
 
         ]
         this.itemBox1 = [         
-           <ItemBox category="Откатные" name="Ворота Откатные" price={100} />,
+           <ItemBox category="Откатные" name="Ворота Откатные" price="Цена договорная" />,
         ]
         this.itemBox2 = [
-            <ItemBox category="Распашные" name="Ворота Распашные" price={100} />,
+            <ItemBox category="Распашные" name="Ворота Распашные" price="Цена договорная" />,
         ]
         this.itemBox3 = [
-            <ItemBox category="Гаражные" name="Ворота Гаражные" price={100} />,
+            <ItemBox category="Гаражные" name="Ворота Гаражные" price="Цена договорная" />,
         ]
 
         this.state = {
             itemBox: [
-                <ItemBox category="Откатные" name="Ворота Откатные" price={100} />,
-                <ItemBox category="Распашные" name="Ворота Распашные" price={100} />,
-                <ItemBox category="Гаражные" name="Ворота Гаражные" price={100} />,
+                <ItemBox category="Откатные" name="Ворота Откатные" price="Цена договорная" />,
+                <ItemBox category="Распашные" name="Ворота Распашные" price="Цена договорная" />,
+                <ItemBox category="Гаражные" name="Ворота Гаражные" price="Цена договорная" />,
             ],
         }
         
@@ -891,27 +892,11 @@ class Rolls extends React.Component{
     constructor(){
         super()
         this.itemBox = [
-            <ItemBox category="Откатные" name="Роллеты Откатные" price={100} />,
-            <ItemBox category="Распашные" name="Роллеты Распашные" price={80} />,
-            <ItemBox category="Обычные" name="Роллеты Обычные" price={90} />,
-            <ItemBox category="Откатные" name="Роллеты Распашные" price={55} />,
-            <ItemBox category="Обычные" name="Роллеты Обычные" price={34} />,
-            <ItemBox category="Обычные" name="Роллеты Обычные" price={15} />,
-            <ItemBox category="Распашные" name="Роллеты Распашные" price={64} />,
-            <ItemBox category="Откатные" name="Роллеты Откатные" price={75} />,
-            <ItemBox category="Распашные" name="Роллеты Распашные" price={24} />,
+            <ItemBox category="Откатные" name="Роллеты" price="Цена договорная" />,
         ]
         this.state = {
             itemBox: [
-                <ItemBox category="Откатные" name="Роллеты Откатные" price={100} />,
-                <ItemBox category="Распашные" name="Роллеты Распашные" price={80} />,
-                <ItemBox category="Обычные" name="Роллеты Обычные" price={90} />,
-                <ItemBox category="Откатные" name="Роллеты Откатные" price={55} />,
-                <ItemBox category="Обычные" name="Роллеты Обычные" price={34} />,
-                <ItemBox category="Обычные" name="Роллеты Обычные" price={15} />,
-                <ItemBox category="Распашные" name="Роллеты Распашные" price={64} />,
-                <ItemBox category="Откатные" name="Роллеты Откатные" price={75} />,
-                <ItemBox category="Распашные" name="Роллеты Распашные" price={24} />,
+                <ItemBox category="Откатные" name="Роллеты" price="Цена договорная" />,
             ],
         }
         

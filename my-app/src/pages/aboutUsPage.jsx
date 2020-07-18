@@ -106,7 +106,7 @@ class Main extends React.Component{
                     </a>
                 </section>
                 <section className="AboutUsMain-aboutus">
-                        <img src="/aboutus-photo.png"></img>
+                        <img className="AboutUsMain-aboutus-photo" src="https://www.dropbox.com/s/t58pz58azyd04wn/30180549_218208852095820_1539557012_n.jpg?dl=1"></img>
                         <div className="AboutUsMain-aboutus-container">
                             <div className="AboutUsMain-aboutus-container-1">
                                 <div className="AboutUsMain-aboutus-container-1-title">
@@ -116,7 +116,7 @@ class Main extends React.Component{
                                 <div className="AboutUsMain-aboutus-container-1-box">
                                     <div className="AboutUsMain-aboutus-container-1-box-text">
                                         <div className="AboutUsMain-aboutus-container-1-box-text1">
-                                        Строительная компания "Строим с Нами" уже более 15 лет на рынке и с каждым годом все больше и больше радует своих клиентов. Высоким качеством работ.
+                                        Строительная компания "Строим с Нами" уже более 9 лет на рынке и с каждым годом все больше и больше радует своих клиентов. Высоким качеством работ.
                                         </div>
                                         <div className="AboutUsMain-aboutus-container-1-box-text1">
                                         Для себя и своей семьи всегда старайтесь выбирать все только самое лучшее. Пользуйтесь услугами "Строим с Нами", и облагораживание участка превратиться из заботы в хобби! 
@@ -133,11 +133,11 @@ class Main extends React.Component{
                             </div>
                             <div className="AboutUsMain-aboutus-container-2">
                                 <div className="AboutUsMain-aboutus-container-2-box1">
-                                    <div className="AboutUsMain-aboutus-container-2-box-number">15</div>
+                                    <div className="AboutUsMain-aboutus-container-2-box-number">9</div>
                                     <div className="AboutUsMain-aboutus-container-2-box-text">Лет на рынке</div>
                                 </div>
                                 <div className="AboutUsMain-aboutus-container-2-box2">
-                                    <div className="AboutUsMain-aboutus-container-2-box-number">250</div>
+                                    <div className="AboutUsMain-aboutus-container-2-box-number">1000+</div>
                                     <div className="AboutUsMain-aboutus-container-2-box-text">Проектов завершено</div>
                                 </div>
                             </div>

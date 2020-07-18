@@ -726,6 +726,9 @@ body{
     height: 670px;
     margin: 30px 0;
 }
+.AboutUsMain-aboutus-photo{
+    width: 400px;
+}
 .AboutUsMain-aboutus-container{
     display: flex;
     flex-direction: column;
@@ -975,7 +978,7 @@ body{
     opacity: 0;
 }
 .GalleryPage-buttonBox-box_active {
-    height: 380px;
+    height: 440px;
     transform: scaleY(1) translateY(0%);
     opacity: 1;
 }
