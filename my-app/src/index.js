@@ -12,6 +12,7 @@ import { Footer } from './footer';
 import { Header } from './header';
 import { MainFormPage } from './formPage';
 import { ThanksPage } from './thanksPage';
+import { Price } from './pages/price';
 
 
 
@@ -23,11 +24,14 @@ ReactDOM.render(
     <div id="Content">
       <Switch>
         <Route path="/" exact component={Home} />
+        
         <Route path="/market" component={Market} />
 
         <Route path="/aboutus" component={AboutUs} />
         <Route path="/desivery" component={Desivery} />
+        <Route path="/price" component={Price} />
         <Route path="/gallery" component={Gallery} />
+
         <Route path="/form" component={MainFormPage} />
         <Route path="/thankspage" component={ThanksPage} />
 

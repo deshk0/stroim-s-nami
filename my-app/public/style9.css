@@ -155,9 +155,15 @@ body{
     transform: scaleY(1) translateY(0%);
     opacity: 1;
 }
+.burgermenu-logo-href, .burgermenu-block1-logo{
+    display: none;
+}
+
 
 /*HEADER STYLES*/
-
+#phone{
+    display: none;
+}
 #Header{
     height: 600px;
     background-size: 100%;
@@ -207,12 +213,17 @@ body{
     text-align: center;
     margin: 30px auto 15px auto;
 }
+.OurPropose-title1{
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0px auto 15px auto;
+}
 .OurPropose-line{
     height: 5px;
     width: 105px;
     background-color: var(--Orange);
-    margin: 0 auto 30px auto;
-
+    margin: 0 auto 15px auto;
 }
 .OurPropose-container{
     display: flex;
@@ -264,6 +275,22 @@ body{
 .OurPropose-container-box-button:hover{
     transition: 0.5s;
     border: 5px solid var(--Orange);
+}
+.OurPartners-container{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.OurPartners-box-img{
+    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.5);
+    width: 220px;
+    height: 220px;
+    margin: 10px;
+}
+.OurPartners-box-img:hover{
+    transition: 0.5s;
+    width: 240px;
+    height: 240px;
 }
 #Homepage-form{
     display: flex;
@@ -403,7 +430,7 @@ body{
     font-weight: bold;
     color: var(--Orange);
     margin-left: 20px;
-    font-size: 20px;
+    font-size: 17px;
 
 }
 .Footer-nav-col3-box2{
@@ -541,6 +568,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
     justify-content: center;
 }
 .ItemBox-box-firstbox-name{
@@ -552,7 +580,18 @@ body{
 .ItemBox-box-firstbox-price{
     font-size: 16px;
     font-weight: bold;
-    color: var(--Orange);
+    color: green;
+}
+.ItemBox-box-firstbox-title{
+    text-align: center;
+    font-size: 16px;
+    color: var(--black);
+}
+.ItemBox-box-firstbox-desc{
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--black);
 }
 .ItemBox-box-secondbox a{
     border: 2px solid;
@@ -725,6 +764,9 @@ body{
     max-width: 1240px;
     height: 670px;
     margin: 30px 0;
+}
+.AboutUsMain-aboutus-photo{
+    width: 400px;
 }
 .AboutUsMain-aboutus-container{
     display: flex;
@@ -975,7 +1017,7 @@ body{
     opacity: 0;
 }
 .GalleryPage-buttonBox-box_active {
-    height: 380px;
+    height: 440px;
     transform: scaleY(1) translateY(0%);
     opacity: 1;
 }
@@ -991,29 +1033,58 @@ body{
     color: white;
     background-color: var(--black);
 }
-.GalleryPage-buttonBox-button{
+.GalleryPage-buttonBox-button, .GalleryPage-buttonBox-button-gate{
     font-size: 22px;
     font-weight: bold;
     margin: 10px;
     border: 2px solid var(--black);
     padding: 20px;
 }
+.GalleryPage-buttonBox-button-gate{
+    font-size: 16px;
+}
+.GalleryPage-container-gates-container-mobile{
+    display: none;
+}
+.GalleryPage-buttonBox-button-gate_active{
+    transition: 0.5s;
+    color: white;
+    border: 2px solid var(--Orange);
+    background-color: var(--Orange);
+}
 .GalleryPage-container{
     display: flex;
     flex-direction: row;
+    justify-content: center;
     flex-wrap: wrap;
     width: 1175px;
+    position: relative;
+
+}
+.GalleryPage-container-gates-container{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1180px;
+    justify-content: center;
 }
 .PhotoBox-photo{
-    width: 350px;
-    height: 200px;
+    width: 310px;
+    height: 225px;
     margin: 20px;
 }
-.PhotoBox-photo:hover{
-    transition: 0.5s;
-    width: 355px;
-    height: 205px;
+.PhotoBox-photo_click{
+    transition: 0.4s;
+    width: 900px;
+    height: 800px;
     margin: 20px;
+    border: 5px solid var(--black);
+    position: absolute;
+    right: 125px;
+    top: 20%;
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,1);
+}
+.body_click{
+    opacity: 0.5;
 }
 .GalleryPage-container-arrows{
     display: flex;
@@ -1023,10 +1094,56 @@ body{
     padding: 20px;
     font-size: 35px;
 }
+.Price-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.Price-container-photo{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.Price-container-box{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+}
+.Price-container-box1{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    margin: 10px 0;
+}
+.Price-container-box-img{
+    width: 300px;
+}
+.Price-container-box-desc{
+    text-align: center;
+    font-weight: bold;
+}
+.Price-container-box-title{
+    text-align: center;
+}
 
 /*<________________________________________________ADAPTATION_____________________________________________________________>*/
 
 @media(max-width: 756px){
+    #phone{
+        transition: 0.4s;
+
+        display: flex;
+        border-radius: 100px;
+        width: 70px;
+        height: 70px;
+        background-color:  rgba(49,245,0,1);
+        position: absolute;
+        right: 10px;
+        margin-top: 80vh;
+        z-index: 1;
+    
+        box-shadow: 0px 0px 21px 1px rgba(0,255,60,0.46);
+    }
     #MainHeader{
         display: none;
     }
@@ -1102,6 +1219,21 @@ body{
         transform-origin: left top;
     
     }
+    .burgermenu-logo-href{
+        display: none;
+    }
+    .burgermenu-logo-href_active{
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        background-color: var(--black);
+        margin-top: 65vh;
+    }
+    .burgermenu-block1-logo {
+        display: flex;
+        height: 40px;
+    }
+
     .NavbarMobile-burgerMenu-block{
         display: flex;
         flex-direction: column;
@@ -1145,10 +1277,11 @@ body{
         transition-delay: 0.2s;
         transform: scaleY(1);
         opacity: 1;
+        font-size: 18px;
     }
     #Footer{
         align-items: flex-start;
-        height: 330px;
+        height: 480px;
     }
     .Footer-nav{
         display: none;
@@ -1174,6 +1307,13 @@ body{
     .Footer-mobile-socialmedia{
         display: flex;
         justify-content: center;
+    }
+    .Footer-mobile-numbers{
+        margin: 10px 0;
+        color: white;
+    }
+    .Footer-mobile-numbers div{
+        margin: 5px 0;
     }
     .Footer-mobile-icon{
         width: 30px;
@@ -1372,8 +1512,12 @@ body{
     }
     #ItemBox {
         width: 312px;
-        height: 312px;
+        height: 352px;
     }
+    .ItemBox-box-firstbox-title, .ItemBox-box-firstbox-price, .ItemBox-box-firstbox-desc {
+        font-size: 15px;
+    }
+
     .MarketMain-container1-search-box {
         padding: 10px;
         margin-left: 10px;
@@ -1409,7 +1553,8 @@ body{
         height: 0px;
     }
     .Market-header-button_active {
-        height: 100%;
+        margin-top: 135px;
+        height: 80%;
         transition: 1s;
         transform: scaleY(1);
         background-color: var(--Orange);
@@ -1418,8 +1563,54 @@ body{
     .GalleryPage-container {
         width: 310px;
         justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    .GalleryPage-container-gates-container-mobile{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+    }
+    .GalleryPage-container-gates-container-mobile-box{
+        transition: 0.5s;
+        transform: scaleY(0) translateY(-20%);
+        height: 0;
+        opacity: 0;
+        flex-wrap: wrap;
+
+    }
+    .GalleryPage-container-gates-container-mobile-box_active{
+        transition: 0.5s;
+        transform: scaleY(1) translateY(0%);
+        height: 648px;
+        opacity: 1;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }   
+    .GalleryPage-buttonBox-button-gate{
+        display: flex;
+        font-size: 15px;
+        font-weight: bold;
+        margin: 10px;
+        border: 2px solid var(--black);
+        padding: 20px;
+    }
+    .GalleryPage-container-gates-container{
+        display: none;
+    }
+    .GalleryPage-container-gates-container-mobile-button{
+        font-size: 15px;
+        font-weight: bold;
+        margin: 10px;
+        border: 2px solid var(--black);
+        padding: 20px;
     }
     .PhotoBox-photo {
+        transition: 0.4s;
+
         width: 240px;
         height: 125px;
         margin: 5px;
@@ -1431,10 +1622,17 @@ body{
         font-size: 14px;
         text-align: center;
     }
-    .PhotoBox-photo:hover{
-        transition: 0.5s;
+    .PhotoBox-photo_click{
+        transition: 0.4s;
         width: 310px;
         height: 205px;
-        margin: 20px;
+        margin: 0px;
+        border: 5px solid var(--black);
+        position: relative;
+        left: 0%;
+        box-shadow: 0px 0px 15px 0px rgba(0,0,0,1);
+    }
+    .Price-container {
+        justify-content: center;
     }
 }

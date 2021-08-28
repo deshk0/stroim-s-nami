@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Form } from './homePage';
+import { Form, Phone } from './homePage';
 
 export class Desivery extends React.Component{
     constructor(){
@@ -10,6 +10,7 @@ export class Desivery extends React.Component{
     render(){
         return(
             <div className="Wrapper">
+                <Phone />
                 <Main title="Способы оплаты" text="Наличный и безналичный расчет"/>
                 <Main title="Регионы доставки" text="Доставка товара по всей Украине"/>
                 <Main1 title="Рассрочка"/>
